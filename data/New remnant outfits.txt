@@ -1,0 +1,28 @@
+# Copyright (c) 2017 by Michael Zahniser
+# edits by Zitchas
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+outfit "Emergency Ramscoop"
+	category "Systems"
+	licenses
+		Remnant
+	cost 72000
+	thumbnail "outfit/emergency ramscoop"
+	"mass" 4
+	"outfit space" -4
+	"ramscoop" 0.5
+	description "The Ember Waste is the sort of place where only a very foolish captain would travel without some sort of device for replenishing hyperspace fuel. While this risk is non-existent in Remnant ships due to their gills which act like ramscoops, some captains prefer to speed up the process by adding additional capacity. This ramscoop is not particularly powerful, but it allows a ship to explore without fear of getting stranded."
+
+#
+#outfit "Remnant License"
+#	category "Special"
+#	thumbnail "outfit/remnant license"
+#	description "The prefects have reached a consensus that you should be considered a valuable friend of the Remnant, and shall be given permission to purchase their ships and technology."
+#

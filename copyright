@@ -1,0 +1,21 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: endless-sky
+Upstream-Contact: Michael Zahniser <mzahniser@gmail.com>
+Source: https://github.com/endless-sky/endless-sky
+
+Files: *
+Copyright: Copyright Zitchas <zitchas.jma@gmail.com>
+License: GPL-3+
+
+Files: images/*
+Copyright: Copyright Michael Zahniser <mzahniser@gmail.com>
+License: CC-BY-SA-4.0
+
+Files: images/ship/Pelican, Peregrine, and Condor
+Copyright: Copyright Brick
+License: unknown
+
+Files: images/outfit/Scanner Software
+Copyright: Everaldo Coelho and YellowIcon
+License: GNU Lesser General Public License 2.1 or later.
+Note: originally entitled "Crystal_Clear_app_kpackage.png" from wikimedia commons

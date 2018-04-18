@@ -1,0 +1,12 @@
+Zitchal Remnant
+My collection of missions, excitement, and additional stuff for the Remnant.
+
+v 0.1 Adds Mark II versions of the three Remnant ships, namely the Starling Mrk II, Albatross Mrk II, and the Penguin. The Mark II ships are basic refinements of the originals. Clearly improved in every way over the originals, but not massively so.
+v 0.2 Add basic missions.
+
+
+
+
+Copyright stuff
+- Original Starling & Albatross graphics from ES
+- Software Scanner graphics originally entitled "Crystal_Clear_app_kpackage.png" from wikimedia commons, author Everaldo Coelho and YellowIcon;  GNU Lesser General Public License 2.1 or later.

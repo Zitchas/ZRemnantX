@@ -8,7 +8,7 @@ So, here's what I'm basing my content on:
 What is the focus of the Remnant?
 	- They are survivors: Their whole point is to hide from and outlast the Alphas, which they perceive to be an existential threat to humanity. 
 	- The Remnants main "shtick" is reverse engineering alien tech. (cloaking devices, construction techniques, anti-missile tech, etc)
-	- In general terms, the Remnant far exceed Republic, Syndicate, and Free World factions. They are roughly on par with the Hai, but with random bits that are on par with or better than the Korath.
+	- In general terms, the Remnant far exceed Republic, Syndicate, and Free World factions. They are theoretically on about the same level as the Hai, but with random bits that are on par with or better than the Korath, and are on course to quickly outpace the Hai. (Hai are stagnant, Remnant are enthusiastially pushing forward)
 	- In more specific terms, they are notable for having faster ships with built in features, such as cloaking devices, gas giant pressurehulls, shield & hull regeneration, etc. 
 	- Their ships generally excel at harassment, sniping, and hit & run tactics. Noteably, however, they have no ammunition based weapons. 
   - Their default canon is extremely long range and has a slowing effect, which is great for running away from things or stopping things from chasing them.

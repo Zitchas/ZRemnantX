@@ -185,4 +185,173 @@ mission "Remnant: Learning Sign 2"
 		conversation
 			`The last leg of the journey was spent watching some ancient show about a merchant captain making his way through the galaxy with an unlikely crew, re-enacted by a cast of Remnant who sing and sign their way through the dialogs. It seems really familiar, but you can't quite place it. You note that it seems to have a lot of subtext about the dangers of manipulation and government secrecy, especially surrounding genetics.`
 			`	You arrive at the Director's desk and offer to return the datapad to the Director, signing your thanks. She seems pleased at how much you have learned, and replies that you are welcome to keep it for as long as you need it. After a short conversation with her you stroll off to look around the spaceport, enjoying the fact that you can now understand a bit of the conversations going on around you. It still takes quite a bit of effort, but it is a good start.`
-			
+
+
+mission "Remnant: Salvage 1"
+	name "Salvage 1"
+	description `Find a copy of human history for the Remnant`
+	source "Viminal"
+	stopover "Alexandria"
+	to offer
+		has "license: Remnant"
+		has "Remnant: Learning Sign 2: done"
+	on offer
+		conversation
+			`As you step out into the icy chill of Viminal you get a comlink message from Tali asking if you could meet her in the cafeteria. Replying in the affirmative, you make your way through the crowds and find an empty table. Moments later Tali appears, grabs two trays from the dispenser, and settles down with an air of exhaustion on the chair opposite you.`
+			`	"It is good to see you again, <first>." she sings softly. When you sign a reply she sits up and smiles. "My, you are a quick study." she signs "Great, this is much faster." `
+			`	"I haven't fully reverse engineered the ramscoops you retrieved for us, but we should be ready to produce them soon. In the meantime, though, they are showing us that humanity has made significant progress since we departed. Could you help us catch up with what has happened out there?" `
+			choice
+				`	"Yes"`
+					goto ContinueSalv
+				`	"Sorry, not interested."`
+					decline
+			label "ContinueSalv"
+			`	"Excellent! According to a friend of mine who is versed in history from the war, there were rumours that someone was building a giant library out in the Deep. If it still exists, that would likely be where to go."`
+				accept
+	on stopover
+		conversation
+			`After having traveled clear across the galaxy, you finally have arrived at the archives of human history. On the direction of the librarians you locate the gift shop and buy a "souvenir copy" of the archive. You idly wonder if you should buy a couple spare copies, just in case, but decide against it.` 
+	
+	on complete
+		conversation
+			`Having literally crossed the galaxy for a copy of the archive, you gently set <ship> down on Viminal hoping that this information is helps. The port seems unusually busy, but the comm channels are quiet beyond the bare minimum to keep traffic organized.`
+			`	Before you have even taken the time to shutdown the engines Tali is halfway up the side of your ship securing a refueling hose and charging cable. As you reach for the comlink she scrambles up to the bridge windows and quickly rattles off a series of signs at you. All you can make out is "Keep ... hot, incoming something?" Before you can frame a reply she has raced across your wing and leapt to the Albatross parked next to you.`
+			`	Looking around more carefully, you note that every ship in the port is idling with fuel lines still connected. If this was some Republic port the safety inspectors would be having a nightmares. One Starling is getting holes in its wings patched even as the crew appear to be running prep-for-flight checklists. It also looks like every ship has a guard. Something tells you that right now would be a bad time to take a walk around town.`
+
+mission "Remnant: Salvage 2"
+	landing
+	source "Viminal"
+	name "Defend <planet>"
+	description "Assist in defending <planet> from a Korath raid, then return to the planet."
+	to offer
+		has "Remnant: Salvage 1: done"
+	on offer
+		conversation
+			`In the flurry of activity and tense waiting for something, it is almost a relief when the planetary defence sirens start. As you watch, the method to their chaos is suddenly evident: Each guard or port hand who had been standing around reaches up and pulls the quick release cable attached to the fuel hose, then race to get themselves and the hoses back out of the way. Mechanics operating overhead slap the buttons on their harnesses to be whisked up to the ceiling of the dome at breakneck speeds. Within seconds the first ships are out of the dome and the rest follow closely behind.`
+			`	As you run up your engines you can't help but marvel at how precise they are, and how well they pull off such a fast launch.`
+			`	Despite not having been told anything, you quickly figure out where you are in the launch sequence and follow the stream of craft heading for orbit.
+				launch
+	npc
+		government "Remnant"
+		personality staying uninterested disables plunders
+		fleet "Large Remnant" 2
+	npc evade
+		government "Korath"
+		personality heroic plunders harvests target
+		fleet "Korath Raid" 7
+		fleet
+			names "korath"
+			cargo 3
+			variant
+				"Korath World-Ship B"
+	on visit
+		dialog "There are still Korath raiders circling overhead. You should take off and help the Remnant ships to fight them."
+	on complete
+		payment 1500000
+		conversation
+			`As some ships maintain orbital sentry positions, most ships return to their berths. Mechanics are soon swarming over the ships, and what you suspect are ambulances are waiting at the ramps to collect the injured. Farther back, flat  bed tractor units wait to pick up any salvage that had been collected.`
+			`	Eventually a tired but pleased looking prefect stops by your ship. He starts with "Do you understand our language, or do I need to sing?" He looks relieved when you reply that you can understand most of what is said so long as he speaks slowly. "Thank you for your assistance during the raid. The sensors you placed on Parca picked up the fleet coming in and gave us sufficient warning to get everyone ready."`
+			`	He is silent for a moment, with the air of someone who is enjoying not having to run for the first time in a while. "Oh, Tali said that you might have some historical records for us?" you hand over the copy of the archive in response, telling him that is probably the best available. He thanks you and hands over a creditstick with 1.5M credits on it. After a little more conversation he hauls himself to his feet "I'll make sure this gets where it needs to go. Thank you!"
+
+mission "Remnant: Salvage 3"
+	source "Viminal"
+	name "Remnant Salvage 3"
+	description "A Korath ship escaped the raid on Viminal. Track it down."
+	to offer
+		has "Remnant: Salvage 2: done"
+	on offer
+		conversation
+			`Walking into the cafeteria you immediately sense the buoyant mood. According to a report on the vidscreen very few Remnant ships were actually lost, and of those the escape pods worked perfectly, ensuring none of the crew were lost. Groups of crew are grouped around tables intermingled with the ground teams that keep their ships operational, and based on the snippets you can catch, they seem to be trading stories of crack shots and clever improvisations.`
+			`	Tali sits over at a corner booth with the prefect who met you at the dock and a couple other mechanics, and she waves you over. "Captain <last>! So, how do you like fighting with our fleet?" asks one of the mechanics.
+			choice
+				`	"It seems odd to have a planetary defence fleet plundering"`
+				`	"It was a tough battle"`
+					goto next
+	
+			`	"I suppose it would," chants one of them. "We need access to their tech, though. Otherwise we'll fall behind." judging by the finality of his statement, this is held to be common knowledge among the Remnant.`
+				goto next
+	
+			label next
+			`	While you're conversing with the group, the prefect suddenly glances down at his comlink, reads a message, then looks up at you. "It appears that a ship survived the raid, but hasn't been able to leave our space. Could you deal with it?`
+			choice
+				`	"Sure."`
+				`	"Sorry, I don't have time to help you out."`
+					decline
+
+			`	"Thank you," she sings. "It keeps jumping between systems in our territory. Maybe its jump drive was damaged or something, and it can't escape. If you could disable it so that our techs can get onboard it would be much appreciated. I doubt we'll be able to salvage the ship itself - They pack those things with soldiers - but we should be able to strip everything else of use off it."`
+				accept
+	npc disable
+		government Korath
+		personality coward target uninterested marked waiting
+		system
+			distance 1 2
+		fleet
+			names "korath"
+			cargo 3
+			variant
+				"Korath World-Ship B"
+		dialog "You have disabled the Korath ship that was left over from the raid on <planet>. You can now return there to collect your payment."
+	on complete
+		payment 500000
+		dialog `Back in the spaceport you are met by the prefect who thanks you for disabling it and hands you a credstick for <payment>. "Oh, and if you managed to plunder anything, don't forget to drop it off in the outfitters so the researchers can look at it.`
+
+mission "Remnant: Salvage 4"
+	name "Salvage 4"
+	description `Deliver some high value salvage to Caelian`
+	cargo "Korath Salvage" 20
+	blocked `This delivery request requires 20 tons of cargo space.`
+	source "Viminal"
+	destination "Caelian"
+	to offer
+		has "license: Remnant"
+		has "Remnant: Salvage 3: done"
+	on offer
+		conversation
+			`As you stroll across the tarmac under the great dome you spot Tali heading your way with a flatbed tractor filled with components in tow.`
+			`	"<first>! I'm glad I ran into you. The last raid gave us some particularly good pieces of equipment to study. Could you take these to Caelian then check in with me after?"`
+			choice
+				`	"I could do that"`
+					goto DeliverSalvage
+				`	Not interested.`
+					decline
+			label "DeliverSalvage"
+			`	Tali quickly helps load the cargo onboard your ship. It doesn't appear to be actual whole items anymore, but rather pieces thereof.`
+				accept
+	
+	on complete
+		payment 25000
+		dialog `On Caelian you are able to find the appropriate research warehouse just off the main landing pad. After a few minutes a lab tech disentangles  herself from a project and brings a wagon and camel team out to the ship to unload the salvage. It strikes you as a bit incongruous that a lab tech is using a graviton repulsion lifter to load cargo from your ship into a wagon pulled by a camel.`
+
+mission "Remnant: Salvage 5"
+	landing
+	name "Salvage 5"
+	description `Deliver some high crates to Viminal`
+	cargo "Ship parts" 20
+	blocked `This delivery request requires 20 tons of cargo space.`
+	source "Caelian"
+	destination "Viminal"
+	to offer
+		has "license: Remnant"
+		has "Remnant: Salvage 4: done"
+	on offer
+		conversation
+			`Before the researcher with camel leaves she turns to you and asks:`
+			`	"I have some parts for Tali, could you return them to her?"`
+			choice
+				`	"I could do that"`
+					goto DeliverParts
+				`	Not interested.`
+					decline
+			label "DeliverParts"
+			`	The researcher heads off with the camel, and shortly after returns with a different wagon filled with ship parts to be loaded on your ship.`
+				accept
+	
+	on complete
+		payment 25000
+		set "license: Remnant Salvage"
+		conversation 
+			`Tali meets you at the dock with a flatbed ready to offload the shipment.`
+			`	"Thank you for all the help you've provided in recovering this salvage. I have talked it over with the other engineers, and we have decided to give you access to our salvage."
+			`	"Of course the really advanced and rare stuff is still going to the labs first, but there is a lot of simpler things that we have an abundance of."
+		event
+			"remnant salvage available"

@@ -1,5 +1,5 @@
 # Copyright (c) 2017 by Michael Zahniser
-# edits by Zitchas
+# additional content by Zitchas (2018_)
 #
 # Endless Sky is free software: you can redistribute it and/or modify it under the
 # terms of the GNU General Public License as published by the Free Software
@@ -18,11 +18,27 @@ outfit "Emergency Ramscoop"
 	"mass" 4
 	"outfit space" -4
 	"ramscoop" 0.5
-	description "The Ember Waste is the sort of place where only a very foolish captain would travel without some sort of device for replenishing hyperspace fuel. While this risk is non-existent in Remnant ships due to their gills which act like ramscoops, some captains prefer to speed up the process by adding additional capacity. This ramscoop is not particularly powerful, but it allows a ship to explore without fear of getting stranded."
+	description "The Ember Waste is the sort of place where only a very foolish captain would travel without some sort of device for replenishing hyperspace fuel. While this risk is non-existent in Remnant ships due to their 'gills' which are effectively built-in ramscoops, some captains prefer to speed up the process by adding additional capacity. For the rare captain braving the area in non-remnant ships, this ramscoop is not particularly powerful, but it allows a ship to explore without fear of getting stranded."
 
-#
-#outfit "Remnant License"
-#	category "Special"
-#	thumbnail "outfit/remnant license"
-#	description "The prefects have reached a consensus that you should be considered a valuable friend of the Remnant, and shall be given permission to purchase their ships and technology."
-#
+outfit "Scanner Software"
+	category "Systems"
+	cost 50000
+	thumbnail "outfit/scanner software"
+	"mass" 0
+	"outfit space" 0
+	"cargo scan power" 7
+	"cargo scan speed" 1
+	"outfit scan power" 7
+	"outfit scan speed" 1
+	"heat generation" 1
+	"energy generation" -1
+	description "This software upgrade for your scanner suite allows you to scan a target ship, revealing both cargo and outfits. Given that it is just a software reconfiguration of your on-board targeting software, it doesn't have nearly as good a range as installing an actual scanner outfit, but it'll do in a pinch to meet basic scanning needs. Keep in mind it does use additional power and generates heat."
+
+outfit "Remnant Salvage License"
+	category "Special"
+	thumbnail "outfit/remnant salvage license"
+	description "The engineers have reached a consensus that you since you have helped recover so much salvage, you should have access to it."	
+	
+	
+outfitter "Remnant"
+	"Scanner Software"

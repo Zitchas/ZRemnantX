@@ -291,7 +291,5 @@ ship "Penguin"
 	
 	
 shipyard "Remnant"
-	"Starling Mrk II"
-	"Albatross Mrk II"
 	"Penguin"
 	"Pelican"

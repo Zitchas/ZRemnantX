@@ -30,15 +30,17 @@ outfit "Scanner Software"
 	"cargo scan speed" 1
 	"outfit scan power" 7
 	"outfit scan speed" 1
+	"asteroid scan power" 7
+	"tactical scan power" 7
 	"heat generation" 1
 	"energy generation" -1
-	description "This software upgrade for your scanner suite allows you to scan a target ship, revealing both cargo and outfits. Given that it is just a software reconfiguration of your on-board targeting software, it doesn't have nearly as good a range as installing an actual scanner outfit, but it'll do in a pinch to meet basic scanning needs. Keep in mind it does use additional power and generates heat."
+	description "This software upgrade your scanner suite to provide a wide range of utility scanning, including cargo, outfit, tactical, and asteroid scanning. Given that it is just a software reconfiguration of your on-board targeting software, it doesn't have nearly as good a range as installing an actual scanner outfit, but it'll do in a pinch to meet basic scanning needs. Keep in mind it does use additional power and generates heat."
 
 outfit "Remnant Salvage License"
 	category "Special"
 	thumbnail "outfit/remnant salvage license"
 	description "The engineers have reached a consensus that you since you have helped recover so much salvage, you should have access to it."	
 	
-	
-outfitter "Remnant"
+
+outfitter "Remnant Salvage"
 	"Scanner Software"

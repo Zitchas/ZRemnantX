@@ -15,7 +15,7 @@ planet Aventine
 	spaceport `The oldest buildings in the Remnant capital city harken back to classic human architecture, with stone facades and columns reminiscent of ancient Rome. But as you walk outward toward the more recent additions, the buildings become less and less recognizably human, with curved organic shapes and hundreds of overhanging walkways and balconies. It is as if the layers left behind by centuries of habitation are a frozen record of the slow transition of Remnant culture into something bizarre and almost alien.`
 	shipyard Remnant
 	outfitter Remnant
-	Outfitter "Remnant Salvage"
+	outfitter "Remnant Salvage"
 
 planet Viminal
 	attributes remnant

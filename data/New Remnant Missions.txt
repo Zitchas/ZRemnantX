@@ -46,9 +46,9 @@ mission "Remnant: Return the Samples"
 		has "event: remnant: void sprite research"
 	on offer
 		conversation
-			`As you are walking through the spaceport, the researcher you previously assisted with the studies on the Void Sprites approaches you in a hustle. "We have made some new discoveries" he exclaims in a trill. "Some of the samples that we took all those years ago are actually eggs of some kind. So the Archon must view our previous research as  being disruptive to the Void Sprite's life-cycles. `
+			`As you are walking through the spaceport, the researcher you previously assisted with the studies on the Void Sprites approaches you in a hustle. "We have made some new discoveries" he exclaims in a trill. "Some of the samples that we took all those years ago are actually eggs of some kind. So the Archon must view our previous research as  being disruptive to the Void Sprite's life-cycles."`
 			`"We have been storing these eggs in a cryogenic stasis tank, so they should still be viable and intact. Well, most of them, anyway." His notes trail off on a mournful tone.`
-			`"Could you return some of them to Nasqueron? According to our logs they were found floating in the lower levels of the atmosphere, where their natural buoyancy should keep them afloat"
+			`"Could you return some of them to Nasqueron? According to our logs they were found floating in the lower levels of the atmosphere, where their natural buoyancy should keep them afloat"`
 			choice
 				`	"Sure, I would be glad to return them."`
 				`	"Sorry, I'm really not interested in braving the Archon again."`
@@ -229,7 +229,7 @@ mission "Remnant: Salvage 2"
 		conversation
 			`In the flurry of activity and tense waiting for something, it is almost a relief when the planetary defence sirens start. As you watch, the method to their chaos is suddenly evident: Each guard or port hand who had been standing around reaches up and pulls the quick release cable attached to the fuel hose, then race to get themselves and the hoses back out of the way. Mechanics operating overhead slap the buttons on their harnesses to be whisked up to the ceiling of the dome at breakneck speeds. Within seconds the first ships are out of the dome and the rest follow closely behind.`
 			`	As you run up your engines you can't help but marvel at how precise they are, and how well they pull off such a fast launch.`
-			`	Despite not having been told anything, you quickly figure out where you are in the launch sequence and follow the stream of craft heading for orbit.
+			`	Despite not having been told anything, you quickly figure out where you are in the launch sequence and follow the stream of craft heading for orbit.`
 				launch
 	npc
 		government "Remnant"
@@ -251,7 +251,7 @@ mission "Remnant: Salvage 2"
 		conversation
 			`As some ships maintain orbital sentry positions, most ships return to their berths. Mechanics are soon swarming over the ships, and what you suspect are ambulances are waiting at the ramps to collect the injured. Farther back, flat  bed tractor units wait to pick up any salvage that had been collected.`
 			`	Eventually a tired but pleased looking prefect stops by your ship. He starts with "Do you understand our language, or do I need to sing?" He looks relieved when you reply that you can understand most of what is said so long as he speaks slowly. "Thank you for your assistance during the raid. The sensors you placed on Parca picked up the fleet coming in and gave us sufficient warning to get everyone ready."`
-			`	He is silent for a moment, with the air of someone who is enjoying not having to run for the first time in a while. "Oh, Tali said that you might have some historical records for us?" you hand over the copy of the archive in response, telling him that is probably the best available. He thanks you and hands over a creditstick with 1.5M credits on it. After a little more conversation he hauls himself to his feet "I'll make sure this gets where it needs to go. Thank you!"
+			`	He is silent for a moment, with the air of someone who is enjoying not having to run for the first time in a while. "Oh, Tali said that you might have some historical records for us?" you hand over the copy of the archive in response, telling him that is probably the best available. He thanks you and hands over a creditstick with 1.5M credits on it. After a little more conversation he hauls himself to his feet "I'll make sure this gets where it needs to go. Thank you!"`
 
 mission "Remnant: Salvage 3"
 	source "Viminal"
@@ -262,7 +262,7 @@ mission "Remnant: Salvage 3"
 	on offer
 		conversation
 			`Walking into the cafeteria you immediately sense the buoyant mood. According to a report on the vidscreen very few Remnant ships were actually lost, and of those the escape pods worked perfectly, ensuring none of the crew were lost. Groups of crew are grouped around tables intermingled with the ground teams that keep their ships operational, and based on the snippets you can catch, they seem to be trading stories of crack shots and clever improvisations.`
-			`	Tali sits over at a corner booth with the prefect who met you at the dock and a couple other mechanics, and she waves you over. "Captain <last>! So, how do you like fighting with our fleet?" asks one of the mechanics.
+			`	Tali sits over at a corner booth with the prefect who met you at the dock and a couple other mechanics, and she waves you over. "Captain <last>! So, how do you like fighting with our fleet?" asks one of the mechanics.`
 			choice
 				`	"It seems odd to have a planetary defence fleet plundering"`
 				`	"It was a tough battle"`
@@ -345,13 +345,13 @@ mission "Remnant: Salvage 5"
 			label "DeliverParts"
 			`	The researcher heads off with the camel, and shortly after returns with a different wagon filled with ship parts to be loaded on your ship.`
 				accept
-	
+		event "remnant salvage available"
+		
 	on complete
 		payment 25000
 		set "license: Remnant Salvage"
 		conversation 
 			`Tali meets you at the dock with a flatbed ready to offload the shipment.`
-			`	"Thank you for all the help you've provided in recovering this salvage. I have talked it over with the other engineers, and we have decided to give you access to our salvage."
-			`	"Of course the really advanced and rare stuff is still going to the labs first, but there is a lot of simpler things that we have an abundance of."
-		event
-			"remnant salvage available"
+			`	"Thank you for all the help you've provided in recovering this salvage. I have talked it over with the other engineers, and we have decided to give you access to our salvage."`
+			`	"Of course the really advanced and rare stuff is still going to the labs first, but there is a lot of simpler things that we have an abundance of."`
+		

@@ -1,9 +1,36 @@
+mission "Remnant: Clean-up Bounty"
+	job
+	repeat
+	name "Remnant clean-up bounty"
+	description "Clean up a fleet of Korath chasers harassing ships in Remnant territory, then return to <planet> to receive your payment of <payment>. Remember to salvage whatever you can."
+	source
+		government "Remnant"
+	to offer
+		has "Remnant: Defense 2: done"
+		random < 50
+	npc kill
+		government Korath
+		personality coward target uninterested marked waiting
+		system
+			distance 1 2
+		fleet 4
+			names "korath"
+			cargo 3
+			variant
+				"Korath Chaser"
+		dialog "You have destroyed the Korath ships. You can now return to <planet> to collect your payment."
+	on complete
+		payment 100000
+		dialog "A Remnant military leader thanks you for hunting down the Korath ships, and gives you the agreed-upon payment of <payment>."
+
+
 mission "Remnant: Catalytic Ramscoop"
 	name "Ramscoop Technology"
 	description "An engineer on <planet>, a Remnant world, has offered to pay you one million credits in exchange for obtaining two Catalytic Ramscoops."
 	source Viminal
 	to offer
 		has "license: Remnant"
+		random < 75
 	on offer
 		require "Catalytic Ramscoop"
 		conversation
@@ -44,6 +71,7 @@ mission "Remnant: Return the Samples"
 	to offer
 		has "license: Remnant"
 		has "event: remnant: void sprite research"
+		random < 75
 	on offer
 		conversation
 			`As you are walking through the spaceport, the researcher you previously assisted with the studies on the Void Sprites approaches you in a hustle. "We have made some new discoveries" he exclaims in a trill. "Some of the samples that we took all those years ago are actually eggs of some kind. So the Archon must view our previous research as  being disruptive to the Void Sprite's life-cycles."`
@@ -119,6 +147,7 @@ mission "Remnant: Learning Sign 1"
 	destination "Viminal"
 	to offer
 		has "license: Remnant"
+		random < 75
 	on offer
 		conversation
 			`As you make your way through the spaceport, you become increasingly aware of how quiet it is. Looking around, you note that it doesn't seem any less busy than usual, just that fewer people are paying any attention to you. As a result, they have reverted to their normal gestures instead of singing. It feels oddly isolating to realize that there are hundreds of conversations going on around you, and you can't understand a word of it.`
@@ -195,6 +224,7 @@ mission "Remnant: Salvage 1"
 	to offer
 		has "license: Remnant"
 		has "Remnant: Learning Sign 2: done"
+		random < 75
 	on offer
 		conversation
 			`As you step out into the icy chill of Viminal you get a comlink message from Tali asking if you could meet her in the cafeteria. Replying in the affirmative, you make your way through the crowds and find an empty table. Moments later Tali appears, grabs two trays from the dispenser, and settles down with an air of exhaustion on the chair opposite you.`
@@ -252,6 +282,7 @@ mission "Remnant: Salvage 2"
 			`As some ships maintain orbital sentry positions, most ships return to their berths. Mechanics are soon swarming over the ships, and what you suspect are ambulances are waiting at the ramps to collect the injured. Farther back, flat  bed tractor units wait to pick up any salvage that had been collected.`
 			`	Eventually a tired but pleased looking prefect stops by your ship. He starts with "Do you understand our language, or do I need to sing?" He looks relieved when you reply that you can understand most of what is said so long as he speaks slowly. "Thank you for your assistance during the raid. The sensors you placed on Parca picked up the fleet coming in and gave us sufficient warning to get everyone ready."`
 			`	He is silent for a moment, with the air of someone who is enjoying not having to run for the first time in a while. "Oh, Tali said that you might have some historical records for us?" you hand over the copy of the archive in response, telling him that is probably the best available. He thanks you and hands over a creditstick with 1.5M credits on it. After a little more conversation he hauls himself to his feet "I'll make sure this gets where it needs to go. Thank you!"`
+
 
 mission "Remnant: Salvage 3"
 	source "Viminal"
@@ -319,7 +350,7 @@ mission "Remnant: Salvage 4"
 				accept
 	
 	on complete
-		payment 25000
+		payment 50000
 		dialog `On Caelian you are able to find the appropriate research warehouse just off the main landing pad. After a few minutes a lab tech disentangles  herself from a project and brings a wagon and camel team out to the ship to unload the salvage. It strikes you as a bit incongruous that a lab tech is using a graviton repulsion lifter to load cargo from your ship into a wagon pulled by a camel.`
 
 mission "Remnant: Salvage 5"
@@ -348,10 +379,111 @@ mission "Remnant: Salvage 5"
 		event "remnant salvage available"
 		
 	on complete
-		payment 25000
+		payment 50000
 		set "license: Remnant Salvage"
 		conversation 
 			`Tali meets you at the dock with a flatbed ready to offload the shipment.`
 			`	"Thank you for all the help you've provided in recovering this salvage. I have talked it over with the other engineers, and we have decided to give you access to our salvage."`
 			`	"Of course the really advanced and rare stuff is still going to the labs first, but there is a lot of simpler things that we have an abundance of."`
-		
+
+mission "Remnant: Expanded Horizons Quarg 1"
+	name "Expanded Horizons Quarg 1"
+	description "Take a Remnant researcher to see some Quarg."
+	passengers 3
+	blocked "This mission requires bunks for three passengers."
+	source
+		government "Remnant"
+	destination "Wayfarer"
+	to offer
+		has "Remnant: Learning Sign 2: done"
+		random < 75
+	on offer
+		conversation
+			`As you relax in the cafeteria on <planet> you are approached by young Remnant. Judging by the handheld sensors and tools hanging off her belt, you suspect she is a researcher or an engineer.`
+			`	"Hello Captain <last>, My name is Dawn, and I have been spending the past few days skimming the archive you retrieved. I wanted to ask you a few questions. May I?"`
+			choice
+				`Sure, pull up a chair.`
+					goto AnswerQuestions
+				`Not interested.`
+					decline
+			label "AnswerQuestions"
+			`	She quickly slides into the chair opposite and pulls out a datapad. "Firstly, it says that humanity has met a race called the 'Quarg' and have started exchanging technology with them. Is this true?" She looks at you intently. You sign affirmatively, and she excitedly continues. "Could you tell me about them? An alien race that actually interacts peacefully with humanity is exciting!"`
+			`	After several hours of telling her about visiting Wayfarer and seeing the Quarg it finally dawns on you that it would be easy enough to take her there. You offer to take her and a couple of her colleagues. She eagerly accepts, and tells you they will meet you at your ship in half an hour.`
+				accept
+	on complete
+		payment 50000
+		conversation
+			`Dawn and her colleagues are thrilled with the trip. While they had each served on Remnant ships exploring the Ember wastes or patrolling their territory, none had ever been more than a handful of jumps away from their own space. Their ships were always cautious to stay far away from human space to avoid leading anyone back.`
+			`	Upon arriving at Wayfarer they spend considerable amount of time watching the few Quarg in evidence, however it is easy to see that the real draw of their attention is the ships. You wave your ID across the scanner for the shipyard and take them inside to browse.`
+			branch Rich
+				"net worth" >= 20000000
+			`	After a few minutes a sales agent meanders over to ask if there's anything he can do to help. You ask a few questions about the different ships for Dawn's benefit, listen to the sales agent repeat a few lines from the display, then politely tell him you'll just browse on your own.`
+				goto SkipRich
+			label Rich
+			`	Almost before you are in the main hall a sales manager is at your side, inquiring as to how he can help. You can almost see the credit signs in his eyes and you suspect that scanning your license may have done a quick check of your net worth too.`
+			`	You ask a few leading questions about new designs and play the part of a captain with more money than brains, and the manager eagerly directs you to the big hangars near the end that house their biggest and fanciest ships. After it becomes clear that he doesn't have any experience flying them you politely disentangle yourselves from him to look at the ships in peace.`
+			label SkipRich
+			`	After an hour of browsing they take off to browse the outfitters and agree to meet you back at the spaceport in an hour.`
+
+mission "Remnant: Expanded Horizons Quarg 2"
+	name "Expanded Horizons Quarg 2"
+	description "Perform an outfit scan on the Quarg ship <npc>, then land again on <destination>."
+	source
+		planet Wayfarer
+	to offer
+		has "Remnant: Expanded Horizons Quarg 1: done"	
+	on offer
+		conversation
+			`Dawn and her fellow researchers show up a few minutes after you do, excitedly talking about the various things they have seen.`
+			`	"<first>, there is a pair of Quarg ships taking off shortly, and we were hoping you might be able to get scans of them while they are in flight. It would be really helpful for our understanding of how they work."`
+			choice
+				`	"Sure, that sounds simple enough."`
+					accept
+				`	"Sorry, that sounds risky."`
+					defer
+	
+	on accept
+		log "Volunteered to show Dawn and some of her fellow researchers the world where humans and Quarg co-exist."
+	
+	npc "scan outfits"
+		government Quarg
+		personality staying uninterested
+		fleet Quarg
+		conversation
+			`	Dawn and her compatriots eagerly pore over the readouts as they come in, then ask if you could land again to compare their scans to ones taken on the ground.`
+
+	
+	on complete
+		conversation
+			`You breath a sigh of relief once you are back on the ground without a reaction from the Quarg. You were a touch worried they might take exception to being scanned, but it appears to consider it par for the course for this system filled with human engineers.`
+			`	Dawn does some follow-up scans of idle Quarg ships, and they take some time to make sure all their pictures are well focused and accurate. They let you know that they will meet you back in the spaceport bar.`
+		payment 50000
+
+mission "Remnant: Expanded Horizons Quarg 3a"
+	name "Remnant: Expanded Horizons Quarg 3a"
+	description "Take the Remnant researchers to <planet>"
+	passengers 3
+	blocked `This mission requires bunks for three passengers.`
+	source "Wayfarer"
+	destination
+		government "Remnant"
+	to offer
+		has "Remnant: Expanded Horizons Quarg 2: done"
+	on offer
+		conversation
+			`Back in the spaceport bar you wait around for a couple hours. Just when you were about to go find them, the trio walk in looking cheerful.`
+			`	"OK, I think we are ready to go. Can you take us to <planet>?"`
+			choice
+				`Yes`
+					goto ReturnTrip
+				`Not yet`
+					defer
+			label "ReturnTrip"
+			`	"Great. We will be waiting on your ship."`
+				accept
+	on complete
+		payment 50000
+		conversation
+			`Once back in the privacy of <ship>, the trio are a blur of motion as they chatter back and forth with their signs. Apparently this will be one of the biggest boosts to their research since the first time they salvaged the gear off a Korath raider.`
+			`	Upon arriving at <planet> they quickly thank you, and literally run back to their offices to finish prepping their material to publish and distribute.`
+			

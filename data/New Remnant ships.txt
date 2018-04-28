@@ -22,7 +22,7 @@ ship Gascraft
 		"drag" 1.7
 		"heat dissipation" 0.9
 		"fuel capacity" 700
-		"ramscoop" 1
+		"ramscoop" 0.5
 		"cargo space" 8
 		"outfit space" 90
 		"engine capacity" 34
@@ -62,7 +62,7 @@ ship "Starling"
 		"drag" 3.7
 		"heat dissipation" 0.8
 		"fuel capacity" 900
-		"ramscoop" 2
+		"ramscoop" 1
 		"cargo space" 36
 		"outfit space" 322
 		"weapon capacity" 83
@@ -126,7 +126,7 @@ ship "Pelican"
 		"drag" 7
 		"heat dissipation" 0.8
 		"fuel capacity" 800
-		"ramscoop" 3
+		"ramscoop" 2
 		"energy capacity" 1000
 		"engine capacity" 130
 		"outfit space" 460
@@ -192,7 +192,7 @@ ship "Albatross"
 		"drag" 8.5
 		"heat dissipation" 0.7
 		"fuel capacity" 600
-		"ramscoop" 4
+		"ramscoop" 3
 		"engine capacity" 142
 		"outfit space" 668
 		"weapon capacity" 236
@@ -259,7 +259,7 @@ ship "Penguin"
 		"drag" 1.0
 		"heat dissipation" 1
 		"fuel capacity" 800
-		"ramscoop" 5
+		"ramscoop" 0.5
 		"cargo space" 10
 		"outfit space" 105
 		"engine capacity" 45

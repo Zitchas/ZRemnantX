@@ -5,7 +5,7 @@ v 0.1 Adds Mark II versions of the three Remnant ships, namely the Starling Mrk 
 v 0.2 Add basic missions.
 v 0.3 removed Mark II ships, added the Pelican (thanks to Brick) with temporary stats.
 v 0.4 first semi-public release. (It has stuff, can be played, looks decent to me. No realy major plot, though)
-
+v 0.5 Official Alpha Release. 13 missions, an outfit, a couple placeholder ships. The main thing is the missions.
 
 
 Copyright stuff

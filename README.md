@@ -8,10 +8,16 @@ The Remnant were originally a group of humans who fled human space in the early 
 
 # Timeline notes (definitive)
 First Contact with the Quarg: 2320
+
 The Alpha War: 2450-2470
+
 Player start year: 3013
 
 # Timeline notes (speculative)
-2455 Founding of 
+2455 Founding of Caelian
+
 2456 Founding of Aventine
+
+2457 Founding of Viminal
+
 2900 First time they were attacked by a ship with a weapon that interfered with ship engines (possibly a Korath Detainer? These are currently only found on Tek Far 78 - Osk, Tek Far 71 - Lek, Tek Far 109, Kar Ik Vot 349, and Met Par Tek 53 (Sniper).)

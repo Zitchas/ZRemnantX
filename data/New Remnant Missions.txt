@@ -383,10 +383,10 @@ mission "Remnant: Salvage 5"
 		conversation 
 			`Tali meets you at the dock with a flatbed ready to offload the shipment.`
 			`	Her signs flick at you with a gentleness that you are slowly deciding equates to a cheerful tone. "Thank you for all the help you've provided in recovering this salvage. I have discussed it with the other engineers, and we have decided to give you access to our salvage."`
-			`	She leads you over to the warehouse, scans her ID then yours on the entrance console, and then pulls you to a door on the far side of the outfitting shop. Beyond the door is a room filled with outfits and weapons that clearly don't fit the same style as the other Remnant technology you have seen. Most of the things here you have seen on scans and when salvaging equipment from other ships, but never up close. 
-			`	"Everything in here we have either learned how to duplicate in its current form, or have salvaged in sufficient quantities that we might as well be manufacturing it."
-			`	She nods at the rack of Korath Heat Shunts while she explains, then turns back to you. 
-			`	"Of course the really advanced and rare stuff is still going to the labs first, and won't be available until we have learned all we can from it"`
+			`	She leads you over to the warehouse, scans her ID then yours on the entrance console, and then pulls you to a door on the far side of the outfitting shop. Beyond the door is a room filled with outfits and weapons that clearly don't fit the same style as the other Remnant technology you have seen. Most of the things here you have seen on scans and when salvaging equipment from other ships, but never up close."`
+			`	"Everything in here we have either learned how to duplicate in its current form, or have salvaged in sufficient quantities that we might as well be manufacturing it."`
+			`	She nods at the rack of Korath Heat Shunts while she explains, then turns back to you.`
+			`	"Of course the really advanced and rare stuff is still going to the labs first, and won't be available until we have learned all we can from it."`
 
 mission "Remnant: Expanded Horizons Quarg 1"
 	name "Expanded Horizons Quarg 1"

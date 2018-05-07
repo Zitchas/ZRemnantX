@@ -380,11 +380,13 @@ mission "Remnant: Salvage 5"
 		
 	on complete
 		payment 50000
-		set "license: Remnant Salvage"
 		conversation 
 			`Tali meets you at the dock with a flatbed ready to offload the shipment.`
-			`	"Thank you for all the help you've provided in recovering this salvage. I have talked it over with the other engineers, and we have decided to give you access to our salvage."`
-			`	"Of course the really advanced and rare stuff is still going to the labs first, but there is a lot of simpler things that we have an abundance of."`
+			`	Her signs flick at you with a gentleness that you are slowly deciding equates to a cheerful tone. "Thank you for all the help you've provided in recovering this salvage. I have discussed it with the other engineers, and we have decided to give you access to our salvage."`
+			`	She leads you over to the warehouse, scans her ID then yours on the entrance console, and then pulls you to a door on the far side of the outfitting shop. Beyond the door is a room filled with outfits and weapons that clearly don't fit the same style as the other Remnant technology you have seen. Most of the things here you have seen on scans and when salvaging equipment from other ships, but never up close. 
+			`	"Everything in here we have either learned how to duplicate in its current form, or have salvaged in sufficient quantities that we might as well be manufacturing it."
+			`	She nods at the rack of Korath Heat Shunts while she explains, then turns back to you. 
+			`	"Of course the really advanced and rare stuff is still going to the labs first, and won't be available until we have learned all we can from it"`
 
 mission "Remnant: Expanded Horizons Quarg 1"
 	name "Expanded Horizons Quarg 1"
@@ -399,7 +401,7 @@ mission "Remnant: Expanded Horizons Quarg 1"
 		random < 75
 	on offer
 		conversation
-			`As you relax in the cafeteria on <planet> you are approached by young Remnant. Judging by the handheld sensors and tools hanging off her belt, you suspect she is a researcher or an engineer.`
+			`As you relax in the cafeteria on <planet> you are approached by young Remnant. Judging by the hand-held sensors and tools hanging off her belt, you suspect she is a researcher or an engineer.`
 			`	"Hello Captain <last>, My name is Dawn, and I have been spending the past few days skimming the archive you retrieved. I wanted to ask you a few questions. May I?"`
 			choice
 				`Sure, pull up a chair.`

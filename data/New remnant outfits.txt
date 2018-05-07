@@ -26,21 +26,27 @@ outfit "Scanner Software"
 	thumbnail "outfit/scanner software"
 	"mass" 0
 	"outfit space" 0
-	"cargo scan power" 7
+	"cargo scan power" 8
 	"cargo scan speed" 1
-	"outfit scan power" 7
+	"outfit scan power" 8
 	"outfit scan speed" 1
-	"asteroid scan power" 7
-	"tactical scan power" 7
+	"asteroid scan power" 8
+	"tactical scan power" 8
 	"heat generation" 1
 	"energy generation" -1
-	description "This software upgrade your scanner suite to provide a wide range of utility scanning, including cargo, outfit, tactical, and asteroid scanning. Given that it is just a software reconfiguration of your on-board targeting software, it doesn't have nearly as good a range as installing an actual scanner outfit, but it'll do in a pinch to meet basic scanning needs. Keep in mind it does use additional power and generates heat."
+	description "The remnant are too few in number to support extensive ground-breaking research in all areas of technology, so they prefer to focus their efforts on a few areas of importance. To make up the deficiency in other areas, the Remnant rely on salvaging and reverse engineering technology from those around them. This software is a key part of this effort, as it allows any ship the capacity to do detailed close-range scans to determine what they want to target. Its range is much shorter than that of dedicated scanning equipment, but it means every Remnant ship can be on the lookout for new technology."
 
-outfit "Remnant Salvage License"
-	category "Special"
-	thumbnail "outfit/remnant salvage license"
-	description "The engineers have reached a consensus that you since you have helped recover so much salvage, you should have access to it."	
-	
+outfit "Tuning Rifle"
+	category "Hand to Hand"
+	licenses
+		Remnant
+	cost 65000
+	thumbnail "outfit/remnant rifle"
+	"capture attack" 1.2
+	"capture defense" 1.8
+	"unplunderable" 1
+	description "The Tuning Rifle uses sound waves to destabilize the weaker internal tissue of many races and liquefies them."
 
-outfitter "Remnant Salvage"
+outfitter "Remnant"
 	"Scanner Software"
+	"Tuning Rifle"

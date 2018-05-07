@@ -8,45 +8,6 @@
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-
-ship Gascraft
-	sprite ship/gascraft
-	attributes
-		category Transport
-		cost 530000
-		"shields" 800
-		"hull" 1500
-		"required crew" 1
-		"bunks" 2
-		"mass" 65
-		"drag" 1.7
-		"heat dissipation" 0.9
-		"fuel capacity" 700
-		"ramscoop" 0.5
-		"cargo space" 8
-		"outfit space" 90
-		"engine capacity" 34
-		"shield generation" 0.6
-		"shield energy" 0.4
-		"hull repair rate" 1.2
-		"hull energy" 0.9
-		"gaslining" 1
-	outfits
-		"Millennium Cell"
-		"Supercapacitor"
-		"Emergency Ramscoop"
-		"Quantum Key Stone"
-		
-		"Crucible-Class Thruster"
-		"Crucible-Class Steering"
-		"Hyperdrive"
-	
-	engine 0 30
-	explode "tiny explosion" 8
-	explode "small explosion" 7
-	description "Centuries ago, the Remnant built these ships in order to explore the upper atmosphere of nearby gas giants. The Archons took issue with the Remnant's research methods, and the studies were unable to be completed. The remaining gascraft have been gathering dust in storage for centuries while the Remnant waits to see if the anger of the Archons will subside."
-
-	
 ship "Starling"
 	sprite "ship/starling"
 	attributes
@@ -59,12 +20,12 @@ ship "Starling"
 		"required crew" 6
 		"bunks" 15
 		"mass" 270
-		"drag" 3.7
-		"heat dissipation" 0.8
+		"drag" 3.8
+		"heat dissipation" 0.7
 		"fuel capacity" 900
 		"ramscoop" 1
 		"cargo space" 36
-		"outfit space" 322
+		"outfit space" 312
 		"weapon capacity" 83
 		"engine capacity" 94
 		"shield generation" 1.8
@@ -87,6 +48,7 @@ ship "Starling"
 		"Crystal Capacitor"
 		"Emergency Ramscoop" 2
 		"Quantum Key Stone"
+		"Tuning Rifle" 6
 		
 		"Forge-Class Thruster"
 		"Forge-Class Steering"
@@ -108,73 +70,79 @@ ship "Starling"
 	"final explode" "final explosion small" 1
 	description "One of the strangest and most useful things that the Remnant discovered in the abandoned worlds of the Ember Waste is alien cloaking technology. They designed their scout ships to be able to cloak when needed, in order to explore alien territory without being seen... or to escape in a hurry after stealing something particularly valuable from those aliens."
 	description "	The cloaking technology is built into the Starling's hull; it cannot be removed or transferred to another ship."
-	
 
-ship "Pelican"
-	sprite "ship/pelican"
-	attributes
-		category "Transport"
-		licenses
-			Remnant
-		cost 15000
-		"shields" 20000
-		"hull" 4000
-		"required crew" 15
-		"bunks" 250
-		"cargo space" 140
-		"mass" 600
-		"drag" 7
-		"heat dissipation" 0.8
-		"fuel capacity" 800
-		"ramscoop" 2
-		"energy capacity" 1000
-		"engine capacity" 130
-		"outfit space" 460
-		"weapon capacity" 150
-		"shield generation" 5
-		"shield energy" 4
-		"hull repair rate" 2
-		"hull energy" 1
-		"cloak" .02
-		"cloaking energy" 8
-		"cloaking fuel" .2
-		weapon
-			"blast radius" 360
-			"shield damage" 3600
-			"hull damage" 1800
-			"hit force" 5400
+ship "Starling" "Starling (Heavy)"
 	outfits
-		"Point Defense Turret" 3	
-		"Aeon Cell"
+		"Thrasher Cannon" 5
+		"Point Defense Turret"
+		
+		"Epoch Cell"
+		"Millennium Cell"
 		"Crystal Capacitor"
-		"Thermoelectric Cooler" 5
-		"Quantum Key Stone"
-		"Afterburner"
-		"Smelter-Class Thruster"
+		"Tuning Rifle" 10
+		
+		"Forge-Class Thruster"
 		"Forge-Class Steering"
-		"Jump Drive"
-	
-	gun -8 -138.5
-	gun 8 -138.5
-	turret -0 -41 "Point Defense Turret"
-	turret -6 73.5
-	turret 6 73.5
-	turret -5 8.5 "Point Defense Turret"
-	turret 5 8.5 "Point Defense Turret"
-	engine -19.5 96.5
-	engine 19.5 96.5
-	engine -12.5 109
-	engine 12.5 109
-	engine 0 116.5
-	explode "small explosion" 30
-	explode "medium explosion" 60
-	explode "large explosion" 40
-	explode "huge explosion" 10
-	"final explode" "final explosion large" 1
-	description "The Pelican was built to be an evacuation ship - designed to escape quickly and carry enough people and supplies to establish a new outpost."
-	description "Due to the fact that their lives may well depend on it, the Remnant engineers have put every trick they know into increasing this ship's potential lifespan against an invading foe. The result is an extremely fast and durable semi-organic ship that refugees can depend on. While the Remnant have yet to unlock the secrets of Jump Drive technology, they have salvaged enough of them from Korath Raiders that they are standard equipment on Pelicans."
+		"Hyperdrive"
 
+ship "Starling" "Starling (Sniper)"
+	outfits
+		"Inhibitor Cannon" 5
+		
+		"Epoch Cell"
+		"Crystal Capacitor"
+		"Emergency Ramscoop"
+		"Quantum Key Stone"
+		"Tuning Rifle" 9
+		
+		"Forge-Class Thruster"
+		"Smelter-Class Steering"
+		"Hyperdrive"
+
+ship "Starling" "Starling (Hunter)"
+	outfits
+		"Inhibitor Cannon" 2
+		"Thrasher Turret"
+		
+		"Epoch Cell"
+		"Millennium Cell"
+		"Crystal Capacitor"
+		"Emergency Ramscoop"
+		"Tuning Rifle" 11
+		
+		"Forge-Class Thruster"
+		"Forge-Class Steering"
+		"Hyperdrive"
 	
+	gun
+	gun "Inhibitor Cannon"
+	gun "Inhibitor Cannon"
+	gun
+	gun
+
+ship "Starling" "Starling (Thrasher)"
+	outfits
+		"Thrasher Cannon" 3
+		"Thrasher Turret"
+		
+		"Epoch Cell"
+		"Millennium Cell"
+		"Crystal Capacitor"
+		"Quantum Key Stone"
+		"Tuning Rifle" 8
+		
+		"Forge-Class Thruster"
+		"Forge-Class Steering"
+		"Hyperdrive"
+	
+	gun "Thrasher Cannon"
+	gun "Thrasher Cannon"
+	gun "Thrasher Cannon"
+	gun
+	gun
+
+
+
 ship "Albatross"
 	plural "Albatrosses"
 	sprite "ship/albatross"
@@ -189,12 +157,12 @@ ship "Albatross"
 		"bunks" 75
 		"cargo space" 124
 		"mass" 610
-		"drag" 8.5
-		"heat dissipation" 0.7
+		"drag" 8.6
+		"heat dissipation" 0.6
 		"fuel capacity" 600
 		"ramscoop" 3
 		"engine capacity" 142
-		"outfit space" 668
+		"outfit space" 658
 		"weapon capacity" 236
 		"shield generation" 5.2
 		"shield energy" 4.6
@@ -215,6 +183,7 @@ ship "Albatross"
 		"Crystal Capacitor"
 		"Thermoelectric Cooler" 2
 		"Quantum Key Stone"
+		"Tuning Rifle" 45
 		
 		"Smelter-Class Thruster"
 		"Smelter-Class Steering"
@@ -242,54 +211,332 @@ ship "Albatross"
 	"final explode" "final explosion large" 1
 	description "Once they left human space, it became apparent to the Remnant that they would need to build their own shipyards in order to defend themselves if they were discovered by the Alphas or any other unfriendly faction. Using new composite materials that they discovered, they built ships very different from anything seen in human space."
 
+ship "Albatross" "Albatross (Sniper)"
+	outfits
+		"Inhibitor Cannon" 7
+		"Point Defense Turret" 3
+		
+		"Aeon Cell"
+		"Epoch Cell"
+		"Crystal Capacitor"
+		"Thermoelectric Cooler" 2
+		"Quantum Key Stone"
+		"Tuning Rifle" 57
+		
+		"Forge-Class Thruster"
+		"Crucible-Class Thruster"
+		"Smelter-Class Steering"
+		"Forge-Class Steering"
+		"Hyperdrive"
+	
+	turret "Point Defense Turret"
+	turret "Point Defense Turret"
+	turret
+	turret
+	turret "Point Defense Turret"
+
+ship "Albatross" "Albatross (Turret)"
+	outfits
+		"Thrasher Turret" 4
+		"Point Defense Turret"
+		
+		"Aeon Cell"
+		"Epoch Cell"
+		"Millennium Cell"
+		"Crystal Capacitor"
+		"Thermoelectric Cooler"
+		"Outfits Expansion" 2
+		"Tuning Rifle" 49
+		
+		"Smelter-Class Thruster"
+		"Smelter-Class Steering"
+		"Hyperdrive"
+	
+	turret "Thrasher Turret"
+	turret "Thrasher Turret"
+	turret "Thrasher Turret"
+	turret "Thrasher Turret"
+	turret "Point Defense Turret"
+
+ship "Albatross" "Albatross (Heavy)"
+	outfits
+		"Inhibitor Cannon" 3
+		"Thrasher Cannon" 4
+		"Thrasher Turret" 3
+		
+		"Aeon Cell"
+		"Epoch Cell"
+		"Millennium Cell"
+		"Crystal Capacitor" 2
+		"Thermoelectric Cooler" 2
+		"Outfits Expansion" 4
+		"Tuning Rifle" 65
+		
+		"Forge-Class Thruster"
+		"Crucible-Class Thruster"
+		"Smelter-Class Steering"
+		"Forge-Class Steering"
+		"Hyperdrive"
+	
+	gun "Inhibitor Cannon"
+	gun "Inhibitor Cannon"
+	gun "Inhibitor Cannon"
+	gun "Thrasher Cannon"
+	gun "Thrasher Cannon"
+	gun "Thrasher Cannon"
+	gun "Thrasher Cannon"
+	turret "Thrasher Turret"
+	turret "Thrasher Turret"
+	turret
+	turret
+	turret "Thrasher Turret"
 
 
-	
-	
-ship "Penguin"
-	sprite ship/penguin
+
+ship "Gascraft"
+	plural "Gascraft"
+	sprite "ship/gascraft"
 	attributes
 		category Transport
-		cost 600000
-		"shields" 1500
+		cost 530000
+		"shields" 800
 		"hull" 1500
 		"required crew" 1
-		"bunks" 3
-		"mass" 70
-		"drag" 1.0
-		"heat dissipation" 1
-		"fuel capacity" 800
+		"bunks" 2
+		"mass" 78
+		"drag" 1.7
+		"heat dissipation" 0.9
+		"fuel capacity" 700
 		"ramscoop" 0.5
-		"cargo space" 10
-		"outfit space" 105
-		"engine capacity" 45
+		"cargo space" 8
+		"outfit space" 88
+		"engine capacity" 184
 		"shield generation" 0.6
 		"shield energy" 0.4
 		"hull repair rate" 1.2
 		"hull energy" 0.9
-		"cloak" .02
-		"cloaking energy" 5
-		"cloaking fuel" .1
 		"gaslining" 1
 	outfits
-		"Cargo Scanner"
-		"Outfit Scanner" 2
 		"Millennium Cell"
-		"Supercapacitor"
 		"Emergency Ramscoop"
 		"Quantum Key Stone"
+		"Scanning Software"
+		"Tuning Rifle" 1
 		
 		"Crucible-Class Thruster"
 		"Crucible-Class Steering"
-		"Scram Drive"
+		"Hyperdrive"
 	
 	engine 0 30
 	explode "tiny explosion" 8
 	explode "small explosion" 7
-	description "Centuries ago, the Remnant built the gascrafts in order to explore the upper atmosphere of nearby gas giants. Now with renewed vigor and ideas coming into their labs, the remnant engineers have developed the new Penguin based on the old gascraft hull. Unlike the gascraft that was a single purpose research ship, the Penguin is designed as a long range early warning scout: Equally adept at research on gas giants, silently monitoring for enemy movements, or infiltrating enemy territory. Unlike the Starling, the Penguin can't fight, but it is very well equipped to run, disappear, and hide in unusual locations."
+	description "Centuries ago, the Remnant built these ships in order to explore the upper atmosphere of nearby gas giants. The Archons took issue with the Remnant's research methods, and the studies were unable to be completed. The remaining gascraft have been gathering dust in storage for centuries while the Remnant waits to see if the anger of the Archons will subside."
 
+
+
+ship "Vulture"
+	sprite "ship/vulture"
+	attributes
+		category "Heavy Warship"
+		licenses
+			Remnant
+		cost 45700000
+		"shields" 43600
+		"hull" 19700
+		"required crew" 76
+		"bunks" 104
+		"cargo space" 237
+		"mass" 826
+		"drag" 9.5
+		"heat dissipation" 0.6
+		"fuel capacity" 800
+		"ramscoop" 3
+		"engine capacity" 173
+		"outfit space" 943
+		"weapon capacity" 356
+		"shield generation" 8.2
+		"shield energy" 5.3
+		"hull repair rate" 2.3
+		"hull energy" 1.4
+		weapon
+			"blast radius" 360
+			"shield damage" 3600
+			"hull damage" 1800
+			"hit force" 5400
+	outfits
+		"Inhibitor Cannon" 2
+		"Thrasher Cannon" 4
+		"Thrasher Turret" 4
+		"Point Defense Turret" 2
+
+		"Aeon Cell" 2
+		"Millennium Cell" 2
+		"Crystal Capacitor" 2
+		"Thermoelectric Cooler" 5
+		"Emergency Ramscoop"
+		"Quantum Key Stone"
+		"Tuning Rifle" 76
+
+		"Smelter-Class Thruster"
+		"Forge-Class Steering"
+		"Smelter-Class Steering"
+		Hyperdrive
 	
-	
+	engine 0 166 1.4
+	engine -34 169 1
+	engine 34 169 1	
+	turret 0 90 "Point Defense Turret"
+	turret 38 -32 "Thrasher Turret"
+	turret -38 -32 "Thrasher Turret"
+	turret 83 109 "Thrasher Turret"
+	turret -83 109 "Thrasher Turret"
+	turret 23 9
+	turret -23 9
+	turret 0 -90 "Point Defense Turret"
+	gun 14 -182 "Inhibitor Cannon"
+	gun -14 -182 "Inhibitor Cannon"
+	gun 11 -198 "Thrasher Cannon"
+	gun -11 -198 "Thrasher Cannon"
+	gun 7 -212 "Thrasher Cannon"
+	gun -7 -212 "Thrasher Cannon"
+	explode "small explosion" 30
+	explode "medium explosion" 60
+	explode "large explosion" 40
+	explode "huge explosion" 10
+	"final explode" "final explosion large" 1
+	description "While the Remnant were mainly concerned with the possible arrival of Alphas when first designing these collosal ships, the Korath raids beacame the pushing force behind its production."
+
+
+
+ship "Pelican"
+	sprite "ship/pelican"
+	attributes
+		category "Heavy Freighter"
+		licenses
+			Remnant
+		cost 34600000
+		"shields" 15000
+		"hull" 9000
+		"required crew" 14
+		"bunks" 46
+		"cargo space" 547
+		"mass" 726
+		"drag" 7.5
+		"heat dissipation" 0.7
+		"fuel capacity" 500
+		"ramscoop" 3
+		"engine capacity" 217
+		"outfit space" 614
+		"weapon capacity" 157
+		"shield generation" 4.2
+		"shield energy" 2.4
+		"hull repair rate" 0.9
+		"hull energy" 0.5
+		weapon
+			"blast radius" 360
+			"shield damage" 3600
+			"hull damage" 1800
+			"hit force" 5400
+	outfits
+		"Inhibitor Cannon" 2
+		"Thrasher Turret"
+		"Point Defense Turret" 2
+
+		"Aeon Cell"
+		"Epoch Cell"
+		"Millennium Cell"
+		"Crystal Capacitor" 2
+		"Thermoelectric Cooler" 9
+		"Emergency Ramscoop"
+		"Quantum Key Stone"
+		"Tuning Rifle" 14
+
+		"Forge-Class Thruster"
+		"Smelter-Class Steering"
+		Hyperdrive
+
+	engine 22 92 0.7
+	engine -22 92 0.7
+	engine 0 114 1.1
+	gun 8 -135 "Inhibitor Cannon"
+	gun -8 -135 "Inhibitor Cannon"
+	turret 0 -67 "Thrasher Turret"
+	turret 56 35 "Point Defense Turret"
+	turret -56 35 "Point Defense Turret"
+	explode "small explosion" 30
+	explode "medium explosion" 60
+	explode "large explosion" 40
+	explode "huge explosion" 10
+	"final explode" "final explosion large" 1
+	description "The Pelican was designed to move large amounts of the technology the Remnant found in the Wastes. While it still moves technology on occasion it is now mostly used for redistribution of supplies."
+
+
+
+ship "Peregrine"
+	sprite "ship/peregrine"
+	attributes
+		category "Medium Warship"
+		licenses
+			Remnant
+		cost 23400000
+		"shields" 27000
+		"hull" 10000
+		"required crew" 30
+		"bunks" 45
+		"cargo space" 57
+		"mass" 226
+		"drag" 9.5
+		"heat dissipation" 0.8
+		"fuel capacity" 400
+		"ramscoop" 2
+		"engine capacity" 123
+		"outfit space" 445
+		"weapon capacity" 157
+		"shield generation" 3.2
+		"shield energy" 1.5
+		"hull repair rate" 1.1
+		"hull energy" 0.5
+		weapon
+			"blast radius" 360
+			"shield damage" 3600
+			"hull damage" 1800
+			"hit force" 5400
+	outfits
+		"Thrasher Cannon" 4
+		"Thrasher Turret"
+		"Point Defense Turret" 2
+
+		"Aeon Cell"
+		"Crystal Capacitor"
+		"Thermoelectric Cooler" 3
+		"Emergency Ramscoop"
+		"Quantum Key Stone"
+		"Tuning Rifle" 30
+
+		"Crucible-Class Steering"
+		"Forge-Class Steering"
+		"Forge-Class Thruster"
+		Hyperdrive
+
+	engine 24 115 0.6
+	engine -24 115 0.6
+	engine 0 113 1
+	gun 12 -102 "Thrasher Cannon"
+	gun -12 -102 "Thrasher Cannon"
+	gun 19 -80 "Thrasher Cannon"
+	gun -19 -80 "Thrasher Cannon"
+	turret 0 3 "Thrasher Turret"
+	turret 18 66 "Point Defense Turret"
+	turret -18 66 "Point Defense Turret"
+	explode "tiny explosion" 40
+	explode "small explosion" 20
+	explode "medium explosion" 10
+	"final explode" "final explosion small" 1
+	description "Based on an old vessel they found when they first arrived the Peregrine is one of the Remnants oldest vessels and is the favorite of many captains."
+
 shipyard "Remnant"
-	"Penguin"
+	"Starling"
+	"Peregrine"
 	"Pelican"
+	"Albatross"
+	"Vulture"

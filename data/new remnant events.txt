@@ -14,7 +14,6 @@
 event "remnant salvage available"
 	outfitter "remnant"
 		"Catalytic Ramscoop"
-	outfitter "Remnant Salvage"
 		"Generator (Furnace Class)"
 		"Triple Plasma Core"
 		"Small Heat Shunt"

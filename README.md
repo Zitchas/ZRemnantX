@@ -14,6 +14,9 @@ The Alpha War: 2450-2470
 Player start year: 3013
 
 # Timeline notes (speculative)
+
+2454 Departure from human space
+
 2455 Founding of Caelian
 
 2456 Founding of Aventine

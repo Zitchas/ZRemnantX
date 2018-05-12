@@ -414,7 +414,7 @@ mission "Remnant: Expanded Horizons Quarg 1"
 	destination "Wayfarer"
 	to offer
 		has "Remnant: Learning Sign 2: done"
-		has "visited planet" Wayfarer
+		has "First Contact: Quarg: offered"
 		random < 75
 	on offer
 		conversation
@@ -427,7 +427,7 @@ mission "Remnant: Expanded Horizons Quarg 1"
 					decline
 			label "AnswerQuestions"
 			`	She quickly slides into the chair opposite and pulls out a datapad. "Firstly, our histories mention how humanity met a race called the 'Quarg' and had some ongoing dialogs with them, but not much beyond that. Now here in this history that you brought us, it says that humanity has started exchanging technology with them! Is this true?" She looks at you intently. You sign affirmatively, and she excitedly continues. "Could you tell me about them? An alien race that actually exchanges tech peacefully with humanity is exciting!"`
-			`	After several hours of telling her about visiting Wayfarer and seeing the Quarg it finally dawns on you that it would be easy enough to take her there. You offer to take her and a couple of her colleagues. She eagerly accepts, and tells you they will meet you at your ship in half an hour.`
+			`	After several hours of telling her about meeting the Quarg and visiting their world it finally dawns on you that it would be easy enough to take her to visit the Tarazed. You offer to take her and a couple of her colleagues. She eagerly accepts, although expresses a preference for landing on the human world so they can observe the Quarg ships from a distance. They would rather not draw any attention to themselves. She runs out of the cafeteria after telling you they will meet you at your ship in half an hour.`
 				accept
 	on complete
 		payment 50000
@@ -503,6 +503,6 @@ mission "Remnant: Expanded Horizons Quarg 3"
 	on complete
 		payment 50000
 		conversation
-			`Once back in the privacy of <ship>, the trio are a blur of motion as they chatter back and forth with their signs. Apparently this will be one of the biggest boosts to their research since the first time they salvaged the gear off a Korath raider.`
+			`Once back in the privacy of <ship>, the trio are a blur of motion as they chatter back and forth with their signs. Apparently this will be one of the biggest boosts to their research since the first time they salvaged the gear off a Korath raider. They eventually slow down their signs a bit and explain that up until the time the Remnant left Human space, the Quarg had been reluctant to let anyone conduct detailed scans of their ships, let alone the close contact the engineers on Tarazed seem to enjoy. One of her fellow researchers picks up the story: "Our historical records just have a few pictures and videos of Quarg ships, along with a basic scan that doesn't provide more than the general outline of the ship. These scans" he taps the databanks "actually picked up detailed structural layouts and even identified a number of key components. It isn't nearly enough information to be able to duplicate them, but it is enough that we can start trying to figure out how they work.`
 			`	Upon arriving at <planet> they quickly thank you, and literally run back to their offices to finish prepping their material to publish and distribute.`
 			

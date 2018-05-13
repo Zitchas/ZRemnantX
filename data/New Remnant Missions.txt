@@ -9,12 +9,12 @@ mission "Remnant: Clean-up Bounty"
 		has "Remnant: Defense 2: done"
 		random < 50
 	npc kill
-		government Korath
+		government "Korath (Berserk)"
 		personality coward target uninterested marked waiting
 		system
 			distance 1 2
 		fleet 4
-			names "korath"
+			names "Korath (Berserk)"
 			cargo 3
 			variant
 				"Korath Chaser"

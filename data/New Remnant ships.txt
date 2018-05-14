@@ -536,7 +536,8 @@ ship "Peregrine"
 	description "Based on an old vessel they found when they first arrived the Peregrine is one of the Remnants oldest vessels and is the favorite of many captains."
 
 
-	ship "Korath Hunter"
+
+ship "Korath Hunter"
     sprite "ship/hunter"
     attributes
         category "Interceptor"        

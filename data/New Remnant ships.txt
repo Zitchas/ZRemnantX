@@ -535,9 +535,182 @@ ship "Peregrine"
 	"final explode" "final explosion small" 1
 	description "Based on an old vessel they found when they first arrived the Peregrine is one of the Remnants oldest vessels and is the favorite of many captains."
 
+
+	ship "Korath Hunter"
+    sprite "ship/hunter"
+    attributes
+        category "Interceptor"        
+        "cost" 1143000        
+        "shields" 3200        
+        "hull" 1300        
+        "required crew" 2        
+        "bunks" 3        
+        "mass" 90        
+        "drag" 2.3        
+        "heat dissipation" .9
+        "cargo space" 26        
+        "outfit space" 218        
+        "weapon capacity" 47        
+        "engine capacity" 45
+        "fuel capacity" 600
+        "ramscoop" 1        
+        weapon            
+            "blast radius" 60            
+            "shield damage" 900            
+            "hull damage" 400            
+            "hit force" 1000
+    outfits        
+        "Korath Fire-Lance" 2    
+    
+        "Generator (Furnace Class)"    
+        "Generator (Candle Class)"
+        "Systems Core (Small)"    
+        "Small Heat Shunt" 2        
+        "Korath Repeater Rifle" 2
+                
+        "Thruster (Comet Class)"        
+        "Steering (Comet Class)"
+        "Hyperdrive"    
+
+    engine 0 46
+    engine 10 50 0.5
+    engine -10 50 0.5
+    gun 5 -38 "Korath Fire-Lance"
+    gun -4 -38 "Korath Fire-Lance"
+    explode "tiny explosion" 20    
+    description "These Korath heavy interceptors are seen as far as the Ember Wastes, which they reach by strapping themselves to the hull of larger ships. Groups of young Korath brave the Wastes to test their mettle: those that return are sure to become Raider captains."	
+	
 shipyard "Remnant"
 	"Starling"
 	"Peregrine"
 	"Pelican"
 	"Albatross"
 	"Vulture"
+
+fleet "Korath Home"
+    government "Korath"
+    names "korath"
+    fighters "korath"
+    cargo 3
+    personality
+        timid opportunistic
+    variant 12
+        "Korath World-Ship"
+    variant 12
+        "Korath World-Ship B"
+    variant 12
+        "Korath World-Ship C"
+    variant 4
+        "Korath World-Ship"
+        "Korath Hunter" 4
+    variant 4
+        "Korath World-Ship B"
+        "Korath Hunter" 4
+    variant 4
+        "Korath World-Ship C"
+        "Korath Hunter" 4        
+    variant 2
+        "Korath World-Ship"
+        "Korath Hunter" 6
+    variant 2
+        "Korath World-Ship B"
+        "Korath Hunter" 6
+    variant 2
+        "Korath World-Ship C"
+        "Korath Hunter" 6        
+                
+        
+fleet "Korath Ember Wastes"
+    government "Korath"
+    names "korath"
+    fighters "korath"
+    cargo 1
+    personality
+        disables plunders opportunistic harvests
+    variant
+        "Korath Hunter" 4    
+    variant
+        "Korath Hunter" 6            
+        
+fleet "Korath Raid Remnant"
+    government "Korath"
+    names "korath"
+    fighters "korath"
+    cargo 1
+    personality
+        disables plunders opportunistic harvests
+    variant 4
+        "Korath Raider"
+        "Korath Chaser" 2
+        "Korath Hunter" 3
+    variant 3
+        "Korath Raider"
+        "Korath Chaser" 2
+    variant 3
+        "Korath Hunter" 6        
+    variant 2
+        "Korath Hunter" 10
+
+system Arculus
+    fleet "Large Remnant" 1500
+    fleet "Small Remnant" 1000
+    fleet "Korath Raid Remnant" 30000
+    
+system Cinxia
+    fleet "Large Remnant" 1200
+    fleet "Small Remnant" 900
+    fleet "Korath Raid Remnant" 30000
+    
+system Pantica
+    fleet "Large Remnant" 1000
+    fleet "Small Remnant" 700
+    fleet "Korath Raid Remnant" 30000
+    
+system Perfica
+    fleet "Large Remnant" 8000
+    fleet "Small Remnant" 5000
+    fleet "Korath Raid Remnant" 30000
+    
+system Farinus
+    fleet "Large Remnant" 9000
+    fleet "Small Remnant" 7000
+    fleet "Korath Raid Remnant" 30000
+    
+system Edusa
+    fleet "Large Remnant" 1500
+    fleet "Small Remnant" 1000
+    fleet "Korath Raid Remnant" 20000
+    
+system Tis
+    fleet "Korath Raid" 10000
+    fleet "Korath Ember Wastes" 8000
+    
+system Parca
+    fleet "Korath Raid" 10000
+    fleet "Korath Ember Wastes" 8000
+    
+system Lucina
+    fleet "Korath Raid" 20000
+    fleet "Korath Ember Wastes" 15000
+    
+system Coluber
+    fleet "Korath Raid Remnant" 30000
+    fleet "Korath Ember Wastes" 5000
+    
+system Levana
+    fleet "Korath Raid" 10000
+    fleet "Korath Ember Wastes" 8000
+    
+system Segesta
+    fleet "Korath Ember Wastes" 7000
+    
+system Stercutus
+    fleet "Korath Raid Remnant" 30000
+    fleet "Korath Ember Wastes" 5000
+    
+system Caeculus
+    fleet "Korath Raid Remnant" 30000
+    fleet "Korath Ember Wastes" 5000
+    
+system Peragenor
+    fleet "Korath Ember Wastes" 8000

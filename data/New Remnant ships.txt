@@ -541,8 +541,8 @@ ship "Korath Hunter"
     sprite "ship/hunter"
     attributes
         category "Interceptor"        
-        "cost" 1143000        
-        "shields" 3200        
+        "cost" 1243000        
+        "shields" 3600        
         "hull" 1300        
         "required crew" 2        
         "bunks" 3        

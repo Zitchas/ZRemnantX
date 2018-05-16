@@ -1,37 +1,95 @@
-outfitter "Korath Salvage"
-	"Command Center"
-	"Korath Grab-Strike"
-	"Korath Banisher"
-	"Korath Warder"
-	"Korath Fire-Lance"
-	"Korath Disruptor"
-	"Korath Slicer"
-	"Korath Slicer Turret"
-	"Korath Detainer"
-	"Korath Repeater"
-	"Korath Repeater Turret"
-	"Korath Piercer Launcher"
-	"Korath Piercer"
-	"Korath Piercer Rack"
-	"Korath Mine"
-	"Korath Minelayer"
-	"Korath Mine Rack"
-	"Generator (Candle Class)"
-	"Generator (Furnace Class)"
-	"Generator (Inferno Class)"
-	"Plasma Core"
-	"Double Plasma Core"
-	"Triple Plasma Core"
-	"Small Heat Shunt"
-	"Large Heat Shunt"
-	"Thruster (Asteroid Class)"
-	"Thruster (Comet Class)"
-	"Thruster (Lunar Class)"
-	"Thruster (Planetary Class)"
-	"Thruster (Stellar Class)"
-	"Steering (Asteroid Class)"
-	"Steering (Comet Class)"
-	"Steering (Lunar Class)"
-	"Steering (Planetary Class)"
-	"Steering (Stellar Class)"
-	
+# Copyright (c) 2017 by Michael Zahniser
+# modifications 2018 by Zitchas
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+fleet "Small Remnant"
+	variant 15
+		"Peregrine"
+	variant 20
+		"Pelican"
+	variant 5
+		"Vulture"
+
+fleet "Large Remnant"
+	variant 5
+		"Albatross"
+		"Peregrine" 2
+	variant 6
+		"Albatross (Sniper)"
+		"Peregrine" 2
+	variant 6
+		"Albatross (Turret)"
+		"Starling (Thrasher)" 2
+		"Peregrine" 2
+	variant 10
+		"Pelican" 3
+		"Peregrine" 2
+	variant 10
+		"Pelican" 2
+		"Starling" 3
+	variant 10
+		"Vulture"
+		"Peregrine" 2
+		"Starling" 2
+	variant 1
+		"Vulture"
+		"Albatross" 2
+		"Peregrine" 2
+		"Starling" 2
+
+
+
+phrase "remnant"
+	word
+		"Ancient"
+		"Serene"
+		"Eternal"
+		"Gray"
+		"Starlit"
+		"Moonlit"
+		"Infinite"
+		"Steadfast"
+		"White"
+		"Black"
+	word
+		" "
+	word
+		"Mountain"
+		"Glen"
+		"Stronghold"
+		"Dream"
+		"Wind"
+		"Storm"
+		"Holdfast"
+		"Sea"
+		"Tower"
+		"Redoubt"
+		"Pillar"
+		"Matrix"
+	word
+		" "
+	word
+		"Restored"
+		"Preserved"
+		"Renewed"
+		"Reborn"
+		"Ascending"
+		"Soaring"
+		"Enduring"
+
+shipyard "Remnant"
+	"Peregrine"
+	"Pelican"
+	"Vulture"
+
+
+outfitter "Remnant"
+	"Scanner Software"
+	"Tuning Rifle"

@@ -11,10 +11,11 @@
 
 
 
-event "remnant salvage available"
+event "Remnant Salvage Available"
 	outfitter "remnant"
 		"Catalytic Ramscoop"
 		"Generator (Furnace Class)"
+		"Generator (Candle Class)"
 		"Triple Plasma Core"
 		"Small Heat Shunt"
 		"Large Heat Shunt"
@@ -23,6 +24,15 @@ event "remnant salvage available"
 		"Thruster (Planetary Class)"
 		"Steering (Asteroid Class)"
 		"Steering (Planetary Class)"
+		"Thruster (Comet Class)"        
+        "Steering (Comet Class)"
 		"Korath Fire-Lance"
 		
+event "Remnant advanced Korath Salvage"	
+	outfitter "Remnant"
+		"Korath Grab-Strike"
+		"Korath Banisher"
+		"Korath Warder"
+		"Systems Core (Medium)"
+		"Ramscoop"
 		

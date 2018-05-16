@@ -14,7 +14,7 @@ mission "Remnant: Clean-up Bounty"
 		system
 			distance 1 2
 		fleet 4
-			names "Korath (Berserk)"
+			names "korath"
 			cargo 3
 			variant
 				"Korath Chaser"
@@ -379,7 +379,7 @@ mission "Remnant: Salvage 5"
 			label "DeliverParts"
 			`	The researcher leads you outside, where you find a camel pulling a different wagon filled with ship parts to be loaded on board <ship>.`
 				accept
-		event "remnant salvage available"
+		event "Remnant Salvage Available"
 		
 	on complete
 		payment 50000

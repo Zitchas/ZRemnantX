@@ -9,7 +9,9 @@
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-
+event "Remnant Peregrine"	
+	shipyard "Remnant"
+		"Peregrine"
 
 event "Remnant Salvage Available"
 	outfitter "remnant"
@@ -35,4 +37,3 @@ event "Remnant advanced Korath Salvage"
 		"Korath Warder"
 		"Systems Core (Medium)"
 		"Ramscoop"
-		

@@ -485,12 +485,12 @@ ship "Peregrine"
 		"bunks" 45
 		"cargo space" 57
 		"mass" 226
-		"drag" 9.5
+		"drag" 7.5
 		"heat dissipation" 0.8
 		"fuel capacity" 400
 		"ramscoop" 2
-		"engine capacity" 123
-		"outfit space" 445
+		"engine capacity" 130
+		"outfit space" 460
 		"weapon capacity" 157
 		"shield generation" 3.2
 		"shield energy" 1.5
@@ -525,6 +525,7 @@ ship "Peregrine"
 	gun -12 -102 "Thrasher Cannon"
 	gun 19 -80 "Thrasher Cannon"
 	gun -19 -80 "Thrasher Cannon"
+	gun 0 -40 "Inhibitor Cannon"
 	turret 0 3 "Thrasher Turret"
 	turret 18 66 "Point Defense Turret"
 	turret -18 66 "Point Defense Turret"

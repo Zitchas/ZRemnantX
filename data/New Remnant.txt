@@ -84,11 +84,6 @@ phrase "remnant"
 		"Soaring"
 		"Enduring"
 
-shipyard "Remnant"
-	"Peregrine"
-	"Pelican"
-	"Vulture"
-
 
 outfitter "Remnant"
 	"Scanner Software"

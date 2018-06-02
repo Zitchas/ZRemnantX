@@ -1,6 +1,10 @@
 # ZRemnantX
 Zitchas' plugin for Endless Sky, focused on creating missions and content for the Remnant. This plugin is created with the intention of creating something of sufficient quality to be submitted as a pull request to include in the base game.
 
+Note: This plug-in requires a modification to the base game files: Specifically, editing the "Remnant Missions.txt" file by deleting the entirety of Remnant Defence 2, Remnant Defence 3, and Remnant Bounty.
+
+This is not good practice for a plug-in, however this plug-in is intended to be a future 'added to the base game" type content, and a first step is altering the progression of the initial missions so that non-veteran players aren't blocked from starting the missions by two combat encounters where they basically need a heavy warship and/or a fleet. The Remnant are a secretive faction - they wouldn't be pushing the player to bring an entire fleet of people to their systems, after all.
+
 # The Remnant
 The Remnant were originally a group of humans who fled human space in the early years of the Alpha War, circa 2455. They fled in secret, and intentionally made sure that there was no record of them or their departure. Their fear was that the Alpha's would win, and humanity would be destroyed, and thus they sought to establish new worlds where humanity might survive in hiding. To this end they cut off all contact with human systems, and avoid traveling in systems close to the edge of known human space in order to prevent anyone from being able to follow them home.
 

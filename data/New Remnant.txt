@@ -44,8 +44,6 @@ fleet "Large Remnant"
 		"Peregrine" 2
 		"Starling" 2
 
-
-
 phrase "remnant"
 	word
 		"Ancient"
@@ -83,11 +81,6 @@ phrase "remnant"
 		"Ascending"
 		"Soaring"
 		"Enduring"
-
-shipyard "Remnant"
-	"Peregrine"
-	"Pelican"
-	"Vulture"
 
 
 outfitter "Remnant"

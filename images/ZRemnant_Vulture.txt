@@ -1,0 +1,93 @@
+# Copyright (c) 2017 by Michael Zahniser
+# Copyright (c) 2017 by Zitchas
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ship "Vulture"
+    sprite "sprite/vulture"
+	thumbnail "thumbnail/vulture"
+    attributes
+        category "Heavy Warship"
+        licenses
+            Remnant
+        cost 95700000
+        "shields" 63600
+        "hull" 39700
+        "required crew" 76
+        "bunks" 114
+        "cargo space" 237
+        "mass" 780
+        "drag" 8.5
+        "heat dissipation" 0.6
+        "fuel capacity" 800
+		"ramscoop" 3
+        "engine capacity" 193
+        "outfit space" 943
+        "weapon capacity" 356
+        "shield generation" 8.2
+        "shield energy" 5.3
+        "hull repair rate" 2.3
+        "hull energy" 1.4
+		"slowing resistance" 1
+		"cloak" .04
+		"cloaking energy" 5
+		"cloaking fuel" .1
+        weapon
+            "blast radius" 360
+            "shield damage" 3600
+            "hull damage" 1800
+            "hit force" 5400
+    outfits
+        "Inhibitor Cannon" 7
+        "Thrasher Cannon" 4
+        "Thrasher Turret" 4
+        "Point Defense Turret" 2
+
+        "Aeon Cell" 2
+        "Millennium Cell" 2
+        "Crystal Capacitor" 2
+        "Thermoelectric Cooler" 5
+        "Emergency Ramscoop"
+        "Quantum Key Stone"
+
+        "Smelter-Class Thruster"
+        "Forge-Class Steering"
+        "Smelter-Class Steering"
+        Hyperdrive
+	
+	engine 0 197
+	engine 25.5 198
+	engine -25.5 198
+	engine 17 196
+	engine -17 196
+	turret 15 123 "Thrasher Turret"
+	turret -15 123 "Thrasher Turret"
+	turret 6 30 "Thrasher Turret"
+	turret -6 30 "Thrasher Turret"
+	turret 5 3 "Point Defense Turret"
+	turret -5 3 "Point Defense Turret"
+	gun 0 -223 "Inhibitor Cannon"
+	gun 6 -213 "Inhibitor Cannon"
+	gun -6 -213 "Inhibitor Cannon"
+	gun 9.5 -200.5 "Inhibitor Cannon"
+	gun -9.5 -200.5 "Inhibitor Cannon"
+	gun 16 -186 "Inhibitor Cannon"
+	gun -16 -186 "Inhibitor Cannon"
+
+	explode "small explosion" 30
+	explode "medium explosion" 60
+	explode "large explosion" 40
+	explode "huge explosion" 10
+	"final explode" "final explosion large" 1
+	description "The Vulture is a semi-organic prototype. Using complex shaping systems and incorporating a mixed organic-opitcal neural network, the Vulture pushes the limits of what is possible with hybrid technology. Being a new ship, it does still have some design flaws to work out."
+
+
+
+shipyard "Remnant"
+	Vulture

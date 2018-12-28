@@ -13,6 +13,8 @@
 ship "Penguin"
 	plural "Penguins"
 	sprite "ship/penguin"
+		"frame rate" 3.2
+		rewind
 	attributes
 		category Transport
 		cost 1030000
@@ -192,3 +194,10 @@ ship "Peregrine"
 	explode "medium explosion" 10
 	"final explode" "final explosion small" 1
 	description "Based on an old vessel they found when they first arrived the Peregrine is one of the Remnants oldest vessels and is the favorite of many captains."
+
+
+shipyard "Remnant"
+	add
+	"Penguin"
+	"Peregrine"
+	"Vulture"

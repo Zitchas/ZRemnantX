@@ -1,0 +1,24 @@
+# Copyright (c) 2017 by Michael Zahniser
+# Copyright (c) 2019 by Zitchas
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+outfit "Jump Drive (Broken)"
+	category "Systems"
+	cost 500000
+	thumbnail "outfit/jump drive (broken)"
+	"mass" 20
+	"outfit space" -20
+	"jump speed" .2
+	"jump fuel" 200
+	"hyperdrive" 1
+	description "The workings of the Jump Drive are a total mystery, especially now that this drive seems completely mangled. How it got into to this state of disrepair is beyond you, it may however still hold some research potential."
+

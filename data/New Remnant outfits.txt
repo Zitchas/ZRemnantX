@@ -13,12 +13,12 @@
 
 outfit "Jump Drive (Broken)"
 	category "Systems"
-	cost 500000
+	cost 25000
 	thumbnail "outfit/jump drive (broken)"
 	"mass" 20
 	"outfit space" -20
 	"jump speed" .2
 	"jump fuel" 200
 	"hyperdrive" 1
-	description "The workings of the Jump Drive are a total mystery, especially now that this drive seems completely mangled. How it got into to this state of disrepair is beyond you, it may however still hold some research potential."
+	description "The workings of the Jump Drive are a total mystery, especially now that this drive seems completely mangled. How it manages to continue working in this state is beyond you. It may, however, still hold some research potential."
 

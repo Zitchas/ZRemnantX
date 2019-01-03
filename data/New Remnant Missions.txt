@@ -1,0 +1,199 @@
+# Copyright (c) 2017 by Michael Zahniser
+# Copyright (c) 2018 by Zitchas
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+mission "Remnant: Broken Jump Drive 1"
+	name "Broken Jump Drive"
+	minor
+	description "The Remnant might be interested in this broken but partially functional jump drive."
+	landing
+	to offer
+		has "remnant blood test pure"
+	to complete
+		has "Remnant: Broken Jump Drive 2: offered"
+	source
+		attributes "remnant"
+	on offer
+		conversation
+			`The Remnant seem very interested in acquiring alien technology. Despite its broken nature, maybe they might be interested in buying this partially functional Jump Drive. Do you want to find someone interested?`
+			choice
+				`	(No.)`
+					defer
+				`	(Yes.)`
+			`	You stop by the outfitters and ask one of the engineers if they would be interested. They immediately perk up and offer you <payment> in exchange for the broken jump drive.`
+			choice
+				`	"Sure, that sounds good."`
+					goto end
+				`	"Can you offer me more than that?"`
+					goto more
+				`	"How will my ship leave here without my jump drive?"`
+			
+			`	The engineer looks at you incredulously "You were relying on this for your interstellar travel? You are lucky you made it this far, indeed. If you need a replacement, we have replacements available in the outfitter."`
+			choice
+				`	"Okay, I accept your offer."`
+					goto end
+				`	"Sorry, I think I'll hold on to this for a while longer."`
+					goto refuse
+			
+			label refuse
+			`	He considers this, and sings, "If you wish. Our offer stands, whenever you choose to return."`
+				defer
+			
+			label more
+			`	"We do not have an infinite supply of wealth" he sings. "But we have many researchers working on these drives. Contributing to our research could earn you a place among our test pilots someday when their work is complete."`
+			choice
+				`	"Okay, that sounds worthwhile then."`
+					goto end
+				`	"Sorry, I'm not interested right now."`
+					goto refuse
+			
+			label end
+			`	The Remnant engineers carefully remove the broken jump drive and whisk it away down into the tunnels. "In the future," he sings as he hands you your payment, "if you acquire more broken jump drives, we will continue to buy them from you on the same terms. Until then, good hunting!"`
+				accept
+	
+	on accept
+		outfit "Broken Jump Drive" -1
+		payment 500000
+		"reputation: Remnant" ++
+
+
+
+mission "Remnant: Broken Jump Drive 2"
+	name "More Broken Jump Drives"
+	minor
+	description "Remnant researchers are interested in acquiring more broken jump drives."
+	landing
+	to offer
+		has "Remnant: Broken Jump Drive 1: offered"
+	to complete
+		has "Remnant: Broken Jump Drive 3: offered"
+	source
+		attributes "remnant"
+	on offer
+		conversation
+			`This time when you land with a broken jump drive, an engineer is waiting at your landing pad with some heavy lifting equipment. Clearly he is hoping that you will be willing to sell it. Do you want to offer it to him?`
+			choice
+				`	(No.)`
+					defer
+				`	(Yes.)`
+			`	When you exit the <ship>, the engineer approaches you. "Greetings, Captain <last>" he chants. "As before, our researchers would appreciate another malfunctioning jump drive to study. Would you be willing to provide it?`
+			choice
+				`	"Sorry, I would rather keep this one for now, but you can have it later."`
+					defer
+				`	"Yes, I would be happy to."`
+			`	Once again, they swap your jump drive for a hyperdrive, and pay you far more than you could sell a jump drive for anywhere else. "We will tell the other true Hai to offer you jobs in our job boards," they tell you, "and remember that we need still more jump drives."`
+			choice
+				`	"Then I will find more, and bring them to you."`
+					accept
+				`	"Can you tell me what you are using them for?"`
+			`	"Not yet. If you further prove your friendship, perhaps we will." You assure them that you will continue to do your best to assist them.`
+				accept
+	
+	on accept
+		outfit "Broken Jump Drive" -1
+		payment 500000
+		"reputation: Remnant" ++
+		fail "Remnant: Broken Jump Drive 1"
+
+
+
+mission "Unfettered Jump Drive 3"
+	name "More Jump Drives"
+	minor
+	description "If you find more Jump Drives, you can sell them to the Unfettered Hai for considerably more money than they are worth elsewhere."
+	landing
+	to offer
+		has "Unfettered Jump Drive 2: offered"
+		not "Wanderers: Jump Drive Source: active"
+	to fail
+		has "event: wanderers: unfettered invasion starts"
+	to complete
+		has "Unfettered Jump Drive 4: offered"
+	source
+		attributes "remnant"
+	on offer
+		conversation
+			`You have another jump drive, and the Unfettered will certainly be willing to pay you well for it. They also hinted that they might be willing to give you more information about what they plan to use the jump drives for. Do you want to sell them another drive?`
+			choice
+				`	(No.)`
+					defer
+				`	(Yes.)`
+			`	You meet up with some local Unfettered leaders, and they again pay you a million credits and arrange for your jump drive to be swapped out of your ship. "If you bring more, we will continue to pay you," they say.`
+			choice
+				`	"Can you tell me what you are using the jump drives for?"`
+				`	"Thank you, I will certainly bring more of them when I am able."`
+					accept
+			`	After a brief and hushed discussion in their own language, one of the leaders says, "You have proven your worth, so we will share our secret. The Hai once owned many worlds on the galactic fringe, a territory we can only visit using the jump drive. Those worlds are fruitful and nearly uninhabited. We will reclaim them as our own, and there will be food there to feed the Unfettered for many thousands of years to come."`
+			branch know
+				has "First Contact: Wanderer: offered"
+			choice
+				`	"Is there any other way I can help you to reclaim those worlds?"`
+					goto help
+				`	"'Nearly uninhabited?' You mean another species inhabits some of those worlds now?"`
+					goto wanderers
+			
+			label know
+			`	You suspect that they are talking about the territory that is now inhabited by the Wanderers.`
+			choice
+				`	"Are you at war with the Wanderers? Can I help you to reclaim your territory?"`
+					goto help
+				`	"What are you going to do to the species that owns those worlds right now?"`
+					goto wanderers
+			
+			label help
+			`	"Your help may indeed be beneficial to us," says the leader. "I will tell the others to contact you if they have any particular missions you can undertake."`
+			choice
+				`	"I look forward to hearing from them."`
+					accept
+				`	"What do you plan to do to the species that inhabits those worlds now?"`
+			
+			label wanderers
+			`	"Those worlds are now held by a species of scavengers, who feast on the ruin of proud civilizations. Our scouts tell us that these carrion-feeders have wiped away nearly every Hai artifact, melting down our cities to make metal for their ships and factories, and hiding the scars of our wars beneath newly planted forests. They are an old and strong species, but few in number, and those worlds are ours by right."`
+			`	You try to press them for more information, but they tell you nothing useful, aside from promising you that they will seek out your help when it is time to reclaim their territory.`
+				accept
+	
+	on accept
+		outfit "Jump Drive" -1
+		outfit "Hyperdrive" 1
+		payment 1000000
+		"reputation: Hai (Unfettered)" >?= 30
+		fail "Unfettered Jump Drive 2"
+
+
+
+mission "Unfettered Jump Drive 4"
+	repeat
+	minor
+	to offer
+		has "Unfettered Jump Drive 3: offered"
+		not "Wanderers: Jump Drive Source: active"
+	to fail
+		has "event: wanderers: unfettered invasion starts"
+	to complete
+		never
+	source
+		attributes "remnant"
+	on offer
+		conversation
+			`Would you like to sell another jump drive to the Unfettered?`
+			choice
+				`	(No.)`
+					defer
+				`	(Yes.)`
+			`	As usual, they are more than willing to pay you a million credits for your jump drive, but you do not gain any additional information by talking with them.`
+				accept
+	
+	on accept
+		outfit "Jump Drive" -1
+		outfit "Hyperdrive" 1
+		payment 1000000
+		"reputation: Hai (Unfettered)" >?= 40
+		fail "Unfettered Jump Drive 3"
+		fail "Unfettered Jump Drive 4"

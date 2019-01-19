@@ -12,7 +12,7 @@
 mission "Remnant: Broken Jump Drive 1"
 	name "Jump Drive (Broken)"
 	minor
-	description "The Remnant might be interested in this broken but partially functional jump drive."
+	invisible
 	landing
 	to offer
 		has "remnant blood test pure"
@@ -22,7 +22,7 @@ mission "Remnant: Broken Jump Drive 1"
 		attributes "remnant"
 	on offer
 		conversation
-			`The Remnant seem very interested in acquiring alien technology. Despite its broken nature, maybe they might be interested in buying this partially functional Jump Drive. Do you want to find someone interested?`
+			`The Remnant seem very interested in acquiring alien technology. Despite its broken nature, they might be interested in buying this partially functional Jump Drive. Do you want to ask someone about it?`
 			choice
 				`	(No.)`
 					defer
@@ -35,7 +35,7 @@ mission "Remnant: Broken Jump Drive 1"
 					goto more
 				`	"How will my ship leave here without my jump drive?"`
 			
-			`	The engineer looks at you incredulously "You were relying on this for your interstellar travel? You are lucky you made it this far, indeed. If you need a replacement, we have replacements available in the outfitter."`
+			`	The engineer looks at you incredulously "You were relying on this for your interstellar travel? You are lucky you made it this far, indeed." He shakes his head in amusement, then continues "If you need a replacement, we have standard hyperdrives available in the outfitter."`
 			choice
 				`	"Okay, I accept your offer."`
 					goto end
@@ -47,7 +47,7 @@ mission "Remnant: Broken Jump Drive 1"
 				defer
 			
 			label more
-			`	"We do not have an infinite supply of wealth" he sings. "But we have many researchers working on these drives. Contributing to our research could earn you a place among our test pilots someday when their work is complete."`
+			`	"We do not have an infinite supply of wealth" he sings. "And we must budget our rewards in the expectation that we will need scores or even hundreds of these to unlock the secrets of Jump Drives." He pauses a moment, then continues. "While we cannot offer you more funds, we can offer you early access to the results: Contributing to our research could earn you a place among our test pilots someday when our researcher's work is complete."`
 			choice
 				`	"Okay, that sounds worthwhile then."`
 					goto end
@@ -55,11 +55,12 @@ mission "Remnant: Broken Jump Drive 1"
 					goto refuse
 			
 			label end
-			`	The Remnant engineers carefully remove the broken jump drive and whisk it away down into the tunnels. "In the future," he sings as he hands you your payment, "if you acquire more broken jump drives, we will continue to buy them from you on the same terms. Until then, good hunting!"`
+			`	The Remnant engineers carefully remove the broken jump drive and whisk it away down into the tunnels. "Good hunting!" He sings as he hands you your payment. "We encourage you to salvage more of these whenever you have the opportunity."`
 				accept
 	
 	on accept
 		outfit "Jump Drive (Broken)" -1
+		"remnant: broken jump drive count" ++
 		payment 500000
 		"reputation: Remnant" ++
 
@@ -68,7 +69,7 @@ mission "Remnant: Broken Jump Drive 1"
 mission "Remnant: Broken Jump Drive 2"
 	name "More Broken Jump Drives"
 	minor
-	description "Remnant researchers are interested in acquiring more broken jump drives."
+	invisible
 	landing
 	to offer
 		has "Remnant: Broken Jump Drive 1: offered"
@@ -98,6 +99,7 @@ mission "Remnant: Broken Jump Drive 2"
 	
 	on accept
 		outfit "Jump Drive (Broken)" -1
+		"remnant: broken jump drive count" ++
 		payment 500000
 		"reputation: Remnant" ++
 		fail "Remnant: Broken Jump Drive 1"
@@ -107,7 +109,7 @@ mission "Remnant: Broken Jump Drive 2"
 mission "Remnant: Broken Jump Drive 3"
 	name "More Jump Drives"
 	minor
-	description "Remnant researchers are interested in acquiring more broken jump drives."
+	invisible
 	landing
 	to offer
 		has "Remnant: Broken Jump Drive 2: offered"
@@ -122,29 +124,31 @@ mission "Remnant: Broken Jump Drive 3"
 				`	(No.)`
 					defer
 				`	(Yes.)`
-			`	You stop by the Outfitter, and discover that the engineer there has a standing offer for broken jump drives. "We are always eager to have more" he says.`
+			`	You stop by the Outfitter, and discover that the engineer there has placed a standing offer for broken jump drives. "We are always eager to have more" he sings enthusiastically.`
 			choice
 				`	"Is there any progress on the research I could hear about?"`
 				`	"Excellent, I will continue to bring any others I find."`
 					accept
 			`	The engineer checks his terminal, and after skimming a bit he looks up again. "Well, it looks like there are several different teams working on this. The one that has updated their most recent report is looking into the similarities between standard hyperdrives and these broken jump drives. As you might expect, a device like these should not suddenly change functionality to perfectly match a completely different sort of device just because it was damaged. The researchers think that this down-stepping failure might be significant in understanding what jump drives even are."`
-			`	The engineer continues to share excerpts from various research team's reports with you, and it becomes increasingly clear that while it appears that the Remnant are making significant discoveries, they are probably a very long way from anything definitive.`
+			`	The engineer continues to share excerpts from various research team's reports with you, and it becomes increasingly clear that while it appears that the Remnant are making significant discoveries in several different directions, they are probably a very long way from anything definitive.`
 				accept
 	
 	on accept
 		event "remnant research update bjd1" 100 200
 		outfit "Jump Drive (Broken)" -1
+		"remnant: broken jump drive count" ++
 		payment 500000
 		"reputation: Remnant" ++
 		fail "Remnant: Broken Jump Drive 2"
 
 event "remnant research update bjd1"
-
+# bjd1 = Broken Jump Drive 1. This event is included for forward compatibility with future missions that will require this event to be complete.
 
 
 mission "Remnant: Broken Jump Drive 4"
 	repeat
 	minor
+	invisible
 	to offer
 		has "Remnant: Broken Jump Drive 3: offered"
 	to complete
@@ -158,11 +162,12 @@ mission "Remnant: Broken Jump Drive 4"
 				`	(No.)`
 					defer
 				`	(Yes.)`
-			`	One of the outfitter engineers happily unloads the broken jump drive from your ship and pays you <payment>. Unfortunately there is no news on research progress as of yet.`
+			`	One of the outfitter engineers happily unloads the broken jump drive from your ship and pays you <payment>. They cheerfully tell you that there has been some progress by the various research teams, but nothing concrete as of yet.`
 				accept
 	
 	on accept
 		outfit "Jump Drive" -1
+		"remnant: broken jump drive count" ++
 		payment 500000
 		"reputation: Remnant" ++
 		fail "Remnant: Broken Jump Drive 3"

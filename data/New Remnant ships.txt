@@ -1,5 +1,4 @@
 # Copyright (c) 2017 by Michael Zahniser
-# Copyright (c) 2019 by Zitchas
 #
 # Endless Sky is free software: you can redistribute it and/or modify it under the
 # terms of the GNU General Public License as published by the Free Software
@@ -13,8 +12,8 @@
 
 ship "Penguin"
 	sprite "ship/penguin"
-		"frame rate" 3.2
-		rewind
+		"frame rate" 3
+	thumbnail "thumbnail/penguin"
 	attributes
 		category Transport
 		cost 1030000
@@ -23,7 +22,7 @@ ship "Penguin"
 		"required crew" 1
 		"bunks" 5
 		"mass" 88
-		"drag" 1.4
+		"drag" 1.3
 		"heat dissipation" 0.9
 		"fuel capacity" 700
 		"energy capacity" 250
@@ -31,20 +30,27 @@ ship "Penguin"
 		"cargo space" 19
 		"outfit space" 108
 		"engine capacity" 54
-		"weapon capacity" 20
+		"weapon capacity" 33
 		"shield generation" 1
 		"shield energy" 0.4
 		"hull repair rate" 2
 		"hull energy" 0.9
-		"cloak" .02
+		"cloak" .03
 		"cloaking energy" 5
 		"cloaking fuel" .1
-		"gaslining" 1
+		"outfit scan power" 50
+		"outfit scan speed" 1
+		"tactical scan power" 50
+		"atmosphere scan" 100
+		weapon
+			"blast radius" 20
+			"shield damage" 260
+			"hull damage" 160
+			"hit force" 800
 	outfits
 		"Millennium Cell"
 		"Emergency Ramscoop"
 		"Quantum Key Stone"
-		"Scanner Software"
 		"Tuning Rifle" 1
 		
 		"Crucible-Class Thruster"
@@ -53,94 +59,17 @@ ship "Penguin"
 	
 	engine 0 30
 	gun 0 -60
+	turret 0 -60
 	explode "tiny explosion" 8
 	explode "small explosion" 7
-	description "Centuries ago, the Remnant built these ships in order to explore the upper atmosphere of nearby gas giants. The Archons took issue with the Remnant's research methods, and the studies were unable to be completed. The remaining gascraft have been gathering dust in storage for centuries while the Remnant waits to see if the anger of the Archons will subside."
-
-
-
-ship "Vulture"
-    sprite "sprite/vulture"
-	thumbnail "thumbnail/vulture"
-    attributes
-        category "Heavy Warship"
-        licenses
-            Remnant
-        cost 95700000
-        "shields" 63600
-        "hull" 39700
-        "required crew" 76
-        "bunks" 114
-        "cargo space" 237
-        "mass" 780
-        "drag" 8.5
-        "heat dissipation" 0.6
-        "fuel capacity" 800
-		"ramscoop" 3
-        "engine capacity" 193
-        "outfit space" 943
-        "weapon capacity" 356
-        "shield generation" 8.2
-        "shield energy" 5.3
-        "hull repair rate" 2.3
-        "hull energy" 1.4
-		"slowing resistance" 1
-		"cloak" .04
-		"cloaking energy" 5
-		"cloaking fuel" .1
-        weapon
-            "blast radius" 360
-            "shield damage" 3600
-            "hull damage" 1800
-            "hit force" 5400
-    outfits
-        "Inhibitor Cannon" 7
-        "Thrasher Cannon" 4
-        "Thrasher Turret" 4
-        "Point Defense Turret" 2
-
-        "Aeon Cell" 2
-        "Millennium Cell" 2
-        "Crystal Capacitor" 2
-        "Thermoelectric Cooler" 5
-        "Emergency Ramscoop"
-        "Quantum Key Stone"
-
-        "Smelter-Class Thruster"
-        "Forge-Class Steering"
-        "Smelter-Class Steering"
-        Hyperdrive
+	description "Inspired by close contact with Void Sprites and the reinvigoration of xenobiology, these agile ships are designed to swim in the atmospheres of gas giants. Using revolutionary construction techniques that enable the hulls to flex under their own power, penguins can reshape their skin on the fly to adapt to their environment. Combined with prototypical nervous systems that approach self-awareness, these ships are the first that could be termed alive - if only by the loosest of definitions."
+	description "	The cloaking technology is built into the Penguin's hull; it cannot be removed or transferred to another ship."
 	
-	engine 0 197
-	engine 25.5 198
-	engine -25.5 198
-	engine 17 196
-	engine -17 196
-	turret 15 123 "Thrasher Turret"
-	turret -15 123 "Thrasher Turret"
-	turret 6 30 "Thrasher Turret"
-	turret -6 30 "Thrasher Turret"
-	turret 5 3 "Point Defense Turret"
-	turret -5 3 "Point Defense Turret"
-	gun 0 -223 "Inhibitor Cannon"
-	gun 6 -213 "Inhibitor Cannon"
-	gun -6 -213 "Inhibitor Cannon"
-	gun 9.5 -200.5 "Inhibitor Cannon"
-	gun -9.5 -200.5 "Inhibitor Cannon"
-	gun 16 -186 "Inhibitor Cannon"
-	gun -16 -186 "Inhibitor Cannon"
-
-	explode "small explosion" 30
-	explode "medium explosion" 60
-	explode "large explosion" 40
-	explode "huge explosion" 10
-	"final explode" "final explosion large" 1
-	description "The Vulture is a semi-organic prototype. Using complex shaping systems and incorporating a mixed organic-optical neural network, the Vulture pushes the limits of what is possible with hybrid technology. Being a new ship, it does still have some design flaws to work out."
-
 
 
 ship "Peregrine"
 	sprite "ship/peregrine"
+	thumbnail "thumbnail/peregrine"
 	attributes
 		category "Medium Warship"
 		licenses
@@ -150,19 +79,25 @@ ship "Peregrine"
 		"hull" 10000
 		"required crew" 30
 		"bunks" 45
-		"cargo space" 57
-		"mass" 226
-		"drag" 9.5
-		"heat dissipation" 0.8
-		"fuel capacity" 400
+		"cargo space" 67
+		"mass" 426
+		"drag" 5.0
+		"heat dissipation" 0.9
+		"fuel capacity" 600
 		"ramscoop" 2
-		"engine capacity" 123
-		"outfit space" 445
+		"engine capacity" 173
+		"outfit space" 565
 		"weapon capacity" 157
 		"shield generation" 3.2
 		"shield energy" 1.5
 		"hull repair rate" 1.1
 		"hull energy" 0.5
+		"cloak" .03
+		"cloaking energy" 5
+		"cloaking fuel" .1
+		"outfit scan power" 12
+		"outfit scan speed" 1
+		"tactical scan power" 26
 		weapon
 			"blast radius" 360
 			"shield damage" 3600
@@ -199,10 +134,105 @@ ship "Peregrine"
 	explode "small explosion" 20
 	explode "medium explosion" 10
 	"final explode" "final explosion small" 1
-	description "Based on an old vessel they found when they first arrived the Peregrine is one of the Remnants oldest vessels and is the favorite of many captains."
+	description "The Peregrine is the first ship designed using the refined materials and techniques discovered in recently explored alien ruins. Unlike previous Remnant ships, the Peregrines are the first ships that can be said to be truly alive: While previous ships have been described as 'semi-organic' or 'resembling living creatures,' the Peregrine has what can only be termed a distributed nervous system combined with a self-aware mind on par with the brightest of the homeworld's avians."
+	description "	Watching the Peregrine in the shipyard is a touch disconcerting, as it doesn't stay still. Sensor pods are in constant motion, and the control surfaces twitch on a regular basis. You get the strong impression of an animal that is eager to be on the move."
+	description "	The cloaking technology is built into the Peregrine's hull; it cannot be removed or transferred to another ship."
+
+
+
+ship "Vulture"
+	sprite "ship/vulture"
+	thumbnail "thumbnail/vulture"
+	attributes
+		category "Heavy Warship"
+		licenses
+			Remnant
+		cost 45700000
+		"shields" 43600
+		"hull" 19700
+		"required crew" 76
+		"bunks" 104
+		"cargo space" 237
+		"mass" 826
+		"drag" 5.9
+		"heat dissipation" 0.6
+		"fuel capacity" 800
+		"ramscoop" 3
+		"engine capacity" 173
+		"outfit space" 963
+		"weapon capacity" 356
+		"shield generation" 8.2
+		"shield energy" 5.3
+		"hull repair rate" 2.3
+		"hull energy" 1.4
+		"cloak" .01
+		"cloaking energy" 5
+		"cloaking fuel" .1
+		"outfit scan power" 12
+		"outfit scan speed" 1
+		"tactical scan power" 26
+		weapon
+			"blast radius" 360
+			"shield damage" 3600
+			"hull damage" 1800
+			"hit force" 5400
+	outfits
+		"Inhibitor Cannon" 2
+		"Thrasher Cannon" 4
+		"Thrasher Turret" 4
+		"Point Defense Turret" 2
+
+		"Aeon Cell" 2
+		"Millennium Cell" 2
+		"Crystal Capacitor" 2
+		"Thermoelectric Cooler" 5
+		"Emergency Ramscoop"
+		"Quantum Key Stone"
+		"Tuning Rifle" 76
+
+		"Smelter-Class Thruster"
+		"Forge-Class Steering"
+		"Smelter-Class Steering"
+		Hyperdrive
+	
+	engine 0 166 1.4
+	engine -34 169 1
+	engine 34 169 1	
+	turret 0 90 "Point Defense Turret"
+	turret 38 -32 "Thrasher Turret"
+	turret -38 -32 "Thrasher Turret"
+	turret 83 109 "Thrasher Turret"
+	turret -83 109 "Thrasher Turret"
+	turret 23 9
+	turret -23 9
+	turret 0 -90 "Point Defense Turret"
+	gun 14 -182 "Inhibitor Cannon"
+	gun -14 -182 "Inhibitor Cannon"
+	gun 11 -198 "Thrasher Cannon"
+	gun -11 -198 "Thrasher Cannon"
+	gun 7 -212 "Thrasher Cannon"
+	gun -7 -212 "Thrasher Cannon"
+	explode "small explosion" 30
+	explode "medium explosion" 60
+	explode "large explosion" 40
+	explode "huge explosion" 10
+	"final explode" "final explosion large" 1
+	description "While the Remnant were mainly concerned with the possible arrival of Alphas when first designing these collosal ships, the Korath raids beacame the pushing force behind its production."
+
 
 
 shipyard "Remnant"
 	"Penguin"
 	"Peregrine"
 	"Vulture"
+	"Starling (Heavy)"
+	"Starling (Sniper)"
+	"Starling (Hunter)"
+	"Starling (Thrasher)"
+	"Gull"
+	"Gull (Heavy)"
+	"Gull (Sniper)"
+	"Gull (Support)"
+	"Gull (Cargo)"
+	"Gull (Bunks)"
+	"Pelican"

@@ -10,7 +10,7 @@
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 mission "Remnant: Broken Jump Drive 1"
-	name "Broken Jump Drive"
+	name "Jump Drive (Broken)"
 	minor
 	description "The Remnant might be interested in this broken but partially functional jump drive."
 	landing
@@ -59,7 +59,7 @@ mission "Remnant: Broken Jump Drive 1"
 				accept
 	
 	on accept
-		outfit "Broken Jump Drive" -1
+		outfit "Jump Drive (Broken)" -1
 		payment 500000
 		"reputation: Remnant" ++
 
@@ -97,7 +97,7 @@ mission "Remnant: Broken Jump Drive 2"
 				accept
 	
 	on accept
-		outfit "Broken Jump Drive" -1
+		outfit "Jump Drive (Broken)" -1
 		payment 500000
 		"reputation: Remnant" ++
 		fail "Remnant: Broken Jump Drive 1"
@@ -133,7 +133,7 @@ mission "Remnant: Broken Jump Drive 3"
 	
 	on accept
 		event "remnant research update bjd1" 100 200
-		outfit "Broken Jump Drive" -1
+		outfit "Jump Drive (Broken)" -1
 		payment 500000
 		"reputation: Remnant" ++
 		fail "Remnant: Broken Jump Drive 2"

@@ -1,5 +1,21 @@
-As the swirls of gas close over the <ship> you wonder idly what brought you back here. The last glimpse of the Archon drifting overhead as you descend below the cloud deck provides no answers; a silent, brooding presence in the skies of Nenia. This time, there is no apologetic researcher asking you to risk your life for research, or to return eggs from where they were stolen. Just the silent depths of an alien world and the Void Sprites you have glimpsed here before.
+mission "Void Sprite: Face to Tentacle 1"
+	name "Talk to Plume about the Void Sprites"
+	description "Plume would be very interested in a report on what happened with the Void Sprites"
+	minor
+	landing
+	to offer
+		has "Remnant: Return the Samples 2: done"
+	source
+		system "Nenia"
+	destination "Aventine"
 
-As the <ship> levels off at the designated altitude, you strap yourself into the pressure suit. Stepping into the airlock, you lower the shields so you can exit onto the hull. Out on the surface, you admire the misty kaleidescope of colors filtering down through the cloud layers, playing over distant shapes moving in the mists. Before too long several void sprites emerge, weaving and dancing among the clouds. They swirl for a few minutes around your cargo bay doors as if waiting for something then pulse briefly with flickers of light and then drop into the clouds below. The third void sprite flutters around the <ship>, poking at things and sliding over them. You quickly think to turn on your video recorder to catch the amazing scene. The brief Void Sprite seems to notice your brief moment, and turns towards you with a lunge. As it closes on you, your attention is drawn to what you suspect is its mouth: A zig-zapping crack that peels open like a zipper to reveal an opening that resembles an industrial grinder. 
 
-Up close, the Void Sprite is massive: Even the smallest of the tentacles are easily as thick as your arm, and move with surprising speed and precision.
+`As the swirls of gas close over the <ship> you wonder idly what brought you back here. The last glimpse of the Archon drifting overhead as you descend below the cloud deck provides no answers; a silent, brooding presence in the skies of Nenia. This time, there is no apologetic researcher asking you to risk your life for research, or to return eggs from where they were stolen. Just the silent depths of an alien world and the lure of the Void Sprites you have glimpsed here.`
+
+`	As the <ship> levels off at the designated altitude, you strap yourself into the pressure suit. Stepping into the airlock, you lower the shields so you can exit onto the hull. Out on the surface, you admire the misty kaleidescope of colors filtering down through the cloud layers, playing over distant shapes moving in the mists. Before too long several void sprites emerge, weaving and dancing among the clouds. They swirl for a few minutes around your cargo bay doors as if waiting for something then pulse briefly with flickers of light and then drop into the clouds below. The third void sprite flutters around the <ship>, poking at things and sliding over them. You quickly think to turn on your video recorder to catch the amazing scene. The Void Sprite seems to notice your brief movement, and turns towards you with a lunge. As it closes on you, your attention is drawn to what you suspect is its mouth: A zig-zapping crack that peels open like a zipper to reveal an opening that resembles an industrial grinder.`
+
+`	Up close, the Void Sprite is massive: Even the smallest of the tentacles are easily as thick as your arm, and move with surprising speed and precision. It moves through the air like a strange kind of fish and you can make out a low vibration you suspect is probably from the air whistling over it as it closes with you. As you begin to wonder about the wisdom of observing the Void Sprites from outside the safety of your ship, you recall that your shields are keyed to your equipment: You could activate them to protect yourself from what may be an attack, and they would flow around you. It probably wouldn't be too healthy for the Void Sprite, though.`
+
+choice
+	`	(Activate shields)`
+	`	(Do not activate shields)`

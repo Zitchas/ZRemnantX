@@ -10,8 +10,8 @@ mission "Void Sprite: Face to Maw 1"
 	on offer
 		conversation
 			`As the swirls of gas close over the <ship> you wonder idly what brought you back here. This time, there is no apologetic researcher asking you to risk your life for research, or to return eggs from where they were stolen. The last glimpse of the Archon drifting overhead as you descend below the cloud deck provides no answers; For now, it is nothing more than a silent, brooding presence in the skies of Nenia. The silent depths of an alien world fold over you, gradually erasing the rest of the galaxy from sight.`
-			`	As the <ship> levels off at the designated altitude, you strap yourself into the pressure suit. Stepping into the airlock, you lower the shields so you can exit onto the hull. Out on the surface, you admire the misty kaleidescope of colors filtering down through the cloud layers, playing over distant shapes moving in the mists. Before too long several void sprites emerge, weaving and dancing among the clouds. They swirl for a few minutes around your cargo bay doors as if waiting for something then pulse briefly with flickers of light and then drop into the clouds below. The third void sprite flutters around the <ship>, poking at things and sliding over them. You quickly think to turn on your video recorder to catch the scene. The Void Sprite notices your brief movement, and turns towards you with a lunge. As it closes on you, your attention is drawn to what you suspect is its mouth: A zig-zapping crack that peels open like a zipper to reveal an opening that resembles an industrial grinder.`
-			`	Up close, the Void Sprite is massive: Most of its tentacles are easily as thick as your leg, and move with surprising speed and precision. It moves through the air like a strange kind of fish and you can make out a low vibration you suspect is probably from the air whistling over it as it closes with you. Facing down this rapidly approaching giant, you feel something click in the back of your mind and a wave of terror and paralysis washes over you. In a moment of lucidity moments before the void sprite hits, you recall that your shields are keyed to your equipment: You could activate them to protect yourself from what looks like an attack, and they would extend around you. It probably wouldn't be too healthy for the Void Sprite, though.`
+			`	As the <ship> levels off at the designated altitude, you strap yourself into the pressure suit. Stepping into the airlock, you lower the shields so you can exit onto the hull. Out on the surface, you admire the misty kaleidescope of colors filtering down through the cloud layers, playing over distant shapes moving in the mists. Before too long several void sprites emerge, weaving and dancing among the clouds. They swirl for a few minutes around your cargo bay doors as if waiting for something then pulse briefly with flickers of light and then drop into the clouds below. The third void sprite flutters around the <ship>, poking at things and sliding over them. You quickly think to turn on your video recorder to catch the scene. The Void Sprite notices your brief movement, and turns towards you with a lunge. As it closes on you, your attention is drawn to what you suspect is its mouth: A zig-zagging crack that peels open like a zipper to reveal an opening that resembles an industrial grinder.`
+			`	Up close, the Void Sprite is massive: Most of its tentacles are easily as thick as your leg, and move with surprising speed and precision. It moves through the air like a strange kind of fish and you can make out a low vibration you suspect is probably from the air whistling over it as it closes with you. Facing down this rapidly approaching giant, you feel something click in the back of your mind and a wave of terror and paralysis washes over you. In a moment of lucidity moments before the void sprite hits, you recall that your shields are keyed to your equipment: You could activate them to protect yourself from this attack, and they would extend around you. It probably wouldn't be too healthy for the Void Sprite, though.`
 			choice
 				`	(Activate shields)`
 				`	(Do not activate shields)`
@@ -25,3 +25,55 @@ mission "Void Sprite: Face to Maw 1"
 			launch
 	on accept
 		fail "Void Sprite: Face to Maw 1b"
+		event "remnant: penguin" 
+	on complete
+		conversation
+			'When you walk into Plume's lab on Aventine you find him berried in some kind of holographic projection of your egg returning mission. You can see that he appears to be watching the video in slow-motion as he taps out notes on his datapad. After a few minutes he looks up and see you standing in the entryway. He quickly pulls himself out of the projection and hits what you assume must be the pause button.`
+			`	"Captain <first>! What a pleasant surprise," he trills. "If you are looking for more work, I don't have anything for you right now."`
+			`	"Actually, I have something for you," you reply. "I visited Nenia and had an interesting encounter with a void sprite. I came away from it with some more footage and a container of slime." He eagerly accepts the datacube and the container from you. He slides the container into some kind of machine that immediately starts whirring, and slots the datacube into his console. Moments later his holographic projection shifts to the new footage. He checks the time stamps, then chants "These will take me a little while to analyze. I will meet you in the spaceport in a few hours to discuss my preliminary findings."`
+
+
+
+mission "Void Sprite: Face to Maw 2"
+	name "Take slime sample to Tali on Viminal"
+	description "The slime has properties of interest to a team of engineers on <planet>."
+	to offer
+		has "Void Sprite: Face to Maw 1: done"
+	source "Aventine"
+	destination "Viminal"
+	cargo "slime sample" 1
+	on offer
+		conversation
+			`When Plume finally arrives you can tell from his step that he is excited. He slides onto the bench opposite you and pulls out a datapad. "I admire your bravery, Captain. I don't think I would the courage to hold my ground against a void sprite like that" he chants respectfully, then changes tone to one of wonder."In that last moment it almost looked like it was sizing you up or examining you." He shakes his head with an amused expression. "I spend so much time studying non-human creatures I sometimes slip and start anthropomorphizing them." His voice takes on a more militant cadence. "That was probably some kind of territorial display, or possibly some kind of dominance challenge. We don't know enough about void sprite behaviors to speculate further, though."`
+			`	"Be that as it may be, the more immediate reward for your curiosity is in this sample," he trills with excitement. "Several of our labs on Viminal have been working on the development of a new generation of ship technology, and this substance contains some chemicals that could be a key component. I have already transmitted the data to them, but they would like to compare with the original. Could you take this sample to them?"`
+			choice
+				`	"Yes, I can."`
+					accept
+				`	"I would rather not."`
+			`	Plume stoically accepts that with a nod "That is your choice. I will arrange for another ship to transport it."`
+			decline
+	on accept
+		event "remnant: penguin"
+	on complete
+		event "remnant: tali"
+		payment 1000000
+		conversation
+			branch tali
+				"remnant tali" != 0
+			`When you land on Viminal a solidly-built female Remant in coveralls is waiting for you. "Greetings, Captain <first>. My name is Tali, and I am a Prefect among the Remnant. Above all else, I study motion, and in particular how our starships move."`
+			goto main
+			label tali
+			`	When you land on Viminal you spot Tali waiting for you. "Greetings, Captain <first>. It is good to see you again."`
+			label main
+			`	"So, Plume sent us some very interesting data, along with a message to expect you with a sample?" You hand her the container with the slime sample and she holds it up to the light. "Interesting looking stuff" she chants. "Let's go back to my shop." She leads the way through several side passages to an out-of-the-way landing pad connected to a large hanger. Inside, you can see a giant tank filled with a murky fluid, watched over by a flock of displays. She makes her way over to a large machine with a several slots which she slides the container into. As the machine starts to work, she turns back to you.`
+			`	"As the primary example of space-faring life, the Void Sprites have always been of interest to me. They have numerous advantages that we as atmosphere-bound creatures can only dream of, such as being able to experience space in a much more direct manner. I have been working on a side project to build a new generation of ships that melds these ideas with our current technology, but the data we have on the Void Sprites is centuries old and incomplete" her chant trails off as she pulls up a display with your original scans on them. "But your recent explorations provided new data I could use to update my designs, but they were still missing a key component. This slime that you retrieved has resolved that."`
+			`	The machine dings, and she looks over the results and then trills excitedly. "Yes, it matches! So it is time to begin the final activation." She strides over to a central console and taps in a series of commands, followed by an iris scan and a blood prick. The industrial hum of the room suddenly ramps up to a crescendo as your senses are assaulted by what you can only describe as the smell of a thunderstorm in a swamp. A few seconds later it begins to quieten again, and the tank starts lowering into the floor as a shape emerges from the liquid.`
+			`	The ship before you has some faint traces of the gascraft you have flown to Nenia, along with other elements of Remnant design, but it is clearly something new. Its antennae swivel around, as if taking in its surroundings, and the tendrils along the side twitch and reach out to touch its surroundings. Solidly built tendrils underneath it flex as it lifts itself off its supports and begins to move around. You have a momentary vision of what this ship might look like in the skies of Nenia.`
+			scene 
+
+event "remnant: penguin"
+	shipyard "Remnant Gascraft"
+		add "Penguin"
+
+event "remnant: tali"
+	log "People" "Tali" `As an engineering prefect, Tali is the foremost authority among the Remnant on salvaged technology and a senior leader in their reverse engineering program.`
